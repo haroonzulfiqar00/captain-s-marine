@@ -200,6 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
     initStickyHeader();
     initTestimonialCarousel();
+    initMobileMenu();`r`n    initFooterAccordion();
 });
 
 /**
@@ -299,4 +300,135 @@ function initTestimonialCarousel() {
     }
 }
 
+
+
+/**
+ * Initialize Mobile Menu
+ */
+function initMobileMenu() {
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const moreMenuTrigger = document.getElementById('more-trigger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const megaMenuOverlay = document.getElementById('mega-menu-overlay');
+    const mobileMenuTriggers = document.querySelectorAll('.mobile-menu-trigger');
+    
+    // Function to open mobile menu
+    function openMobileMenu() {
+        mobileMenu.classList.add('active');
+        if (mobileMenuToggle) mobileMenuToggle.classList.add('active');
+        if (moreMenuTrigger) moreMenuTrigger.classList.add('active');
+        megaMenuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    // Function to close mobile menu
+    function closeMobileMenu() {
+        mobileMenu.classList.remove('active');
+        if (mobileMenuToggle) mobileMenuToggle.classList.remove('active');
+        if (moreMenuTrigger) moreMenuTrigger.classList.remove('active');
+        megaMenuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    // Toggle mobile menu with mobile toggle button
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+            if (mobileMenu.classList.contains('active')) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
+        });
+    }
+    
+    // Toggle mobile menu with MORE button on mobile
+    if (moreMenuTrigger) {
+        moreMenuTrigger.addEventListener('click', function(e) {
+            // Check if we're on mobile (screen width < 992px)
+            if (window.innerWidth < 992) {
+                e.preventDefault();
+                e.stopPropagation();
+                if (mobileMenu.classList.contains('active')) {
+                    closeMobileMenu();
+                } else {
+                    openMobileMenu();
+                }
+            }
+            // On desktop, the existing MORE panel logic will handle it
+        });
+    }
+    
+    // Close mobile menu
+    if (mobileMenuClose) {
+        mobileMenuClose.addEventListener('click', function() {
+            closeMobileMenu();
+        });
+    }
+    
+    // Close on overlay click
+    if (megaMenuOverlay) {
+        megaMenuOverlay.addEventListener('click', function() {
+            if (mobileMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+    }
+    
+    // Accordion functionality
+    mobileMenuTriggers.forEach(function(trigger) {
+        trigger.addEventListener('click', function() {
+            const submenu = this.nextElementSibling;
+            const isActive = this.classList.contains('active');
+            
+            // Close all other submenus
+            document.querySelectorAll('.mobile-menu-trigger').forEach(function(t) {
+                t.classList.remove('active');
+            });
+            document.querySelectorAll('.mobile-submenu').forEach(function(s) {
+                s.classList.remove('active');
+            });
+            
+            // Toggle current submenu
+            if (!isActive && submenu) {
+                this.classList.add('active');
+                submenu.classList.add('active');
+            }
+        });
+    });
+}
+
+
+
+
+/**
+ * Initialize Footer Accordion
+ */
+function initFooterAccordion() {
+    const footerTriggers = document.querySelectorAll('.footer-accordion-trigger');
+    
+    footerTriggers.forEach(function(trigger) {
+        trigger.addEventListener('click', function() {
+            // Only work on mobile
+            if (window.innerWidth <= 768) {
+                const content = this.nextElementSibling;
+                const isActive = this.classList.contains('active');
+                
+                // Close all other accordions
+                document.querySelectorAll('.footer-accordion-trigger').forEach(function(t) {
+                    t.classList.remove('active');
+                });
+                document.querySelectorAll('.footer-accordion-content').forEach(function(c) {
+                    c.classList.remove('active');
+                });
+                
+                // Toggle current accordion
+                if (!isActive) {
+                    this.classList.add('active');
+                    content.classList.add('active');
+                }
+            }
+        });
+    });
+}
 
