@@ -1,0 +1,735 @@
+/* ========================================
+   CUSTOM FONT IMPORTS
+   ======================================== */
+
+/* FreightBig Pro - For Headings */
+@import url('../fonts/FreightBigPro/stylesheet.css');
+
+/* Avenir LT Pro - For Body Text */
+@import url('../fonts/avenir-lt-pro/stylesheet.css');
+
+/* ========================================
+   CSS Reset & Base Styles
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Color Palette */
+    --Aqua-Blue: #4280A0;
+    --Navy: #003E66;
+    --White: #FFFFFF;
+    --text-black: #000000;
+    --text-gray: #6b6b6b;
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    --border-color: #e0e0e0;
+    
+    /* Typography */
+    --font-heading: 'FreightBig Pro', serif;
+    --font-body: 'Avenir LT Pro', sans-serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.6;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+    
+    /* Transitions */
+    --transition-base: all 0.3s ease;
+    --transition-fast: all 0.15s ease;
+}
+
+html {
+    font-size: var(--font-size-base);
+    scroll-behavior: smooth;
+}
+
+/* body {
+    font-family: var(--font-body);
+    line-height: var(--line-height-base);
+    color: var(--text-black);
+    background-color: var(--bg-white);
+    overflow-x: hidden;
+} */
+
+/* ========================================
+   Typography
+   ======================================== */
+
+/* H1 Styling - As per design specs */
+h1 {
+    color: var(--White);
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 56px; /* 116.667% */
+    margin-bottom: var(--spacing-sm);
+}
+
+/* H2 Styling - As per design specs */
+h2 {
+    color: var(--Navy);
+    font-family: var(--font-heading);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px; /* 125% */
+    letter-spacing: 0.64px;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* H3-H6 using Avenir LT Pro */
+h3, h4, h5, h6 {
+    font-family: var(--font-body);
+    color: var(--Navy);
+    margin-bottom: var(--spacing-sm);
+}
+
+h3 { 
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+}
+
+h4 { 
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+h5 { 
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+h6 { 
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+/* Paragraph and Body Text */
+p {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--text-black);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Links */
+a {
+    color: var(--Navy);
+    text-decoration: none;
+    transition: var(--transition-base);
+    font-family: var(--font-body);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* ========================================
+   Layout Components
+   ======================================== */
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 0 var(--spacing-md);
+}
+
+.container-captain-fluid {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* ========================================
+   HEADER NAVIGATION STYLES
+   ======================================== */
+
+/* Main Header */
+#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #2a2a2a00;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 80px;
+}
+
+#main-header .container-captain-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Logo */
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo img {
+    height: 50px;
+    width: auto;
+}
+
+.header-logo h2 {
+    color: var(--White);
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Primary Navigation */
+.primary-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.primary-nav li {
+    position: relative;
+}
+
+.primary-nav a {
+    color: var(--White);
+    font-family: var(--font-body);
+    text-decoration: none;
+    padding: 10px 0;
+    transition: var(--transition-base);
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 750;
+    line-height: normal;
+}
+
+.primary-nav a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+.primary-nav a.active {
+    color: #00a8e8;
+}
+
+/* Right Side Actions */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.global-btn {
+    background-color: var(--Aqua-Blue);
+    color: var(--White);
+    padding: 15px 25px;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition-base);
+    border: 1px solid transparent;
+    letter-spacing: 0.32px;
+}
+
+.global-btn:hover {
+    background-color: var(--Navy);
+    color: var(--White);
+    text-decoration: none;
+    border: 1px solid var(--Aqua-Blue);
+}
+
+.more-menu-trigger {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--White);
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+    transition: var(--transition-base);
+}
+
+.more-menu-trigger:hover {
+    color: #00a8e8;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 24px;
+}
+
+.hamburger-icon span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transition: var(--transition-base);
+}
+
+/* ========================================
+   BOATS MEGA MENU
+   ======================================== */
+
+.mega-menu {
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    background-color: var(--White);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 999;
+}
+
+.mega-menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mega-menu-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.mega-menu-column h3 {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--Navy);
+    margin-bottom: 20px;
+}
+
+.mega-menu-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mega-menu-column ul li {
+    margin-bottom: 12px;
+}
+
+.mega-menu-column ul li a {
+    color: var(--text-black);
+    font-family: var(--font-body);
+    font-size: 14px;
+    text-decoration: none;
+    transition: var(--transition-base);
+}
+
+.mega-menu-column ul li a:hover {
+    color: var(--Navy);
+    padding-left: 5px;
+}
+
+/* Brand Cards */
+.brand-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.brand-card {
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+    transition: var(--transition-base);
+    text-decoration: none;
+    display: block;
+}
+
+.brand-card:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.brand-card img {
+    width: 100%;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.brand-card span {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--Navy);
+}
+
+/* Mega Menu Overlay */
+.mega-menu-overlay {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 998;
+}
+
+.mega-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ========================================
+   MORE SLIDE-IN PANEL
+   ======================================== */
+
+.more-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100vh;
+    background-color: var(--Navy);
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 1001;
+    overflow-y: auto;
+    padding: 30px;
+}
+
+.more-panel.active {
+    transform: translateX(0);
+}
+
+.more-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.more-panel-header h3 {
+    color: var(--White);
+    font-family: var(--font-heading);
+    font-size: 24px;
+    margin: 0;
+}
+
+.close-panel {
+    background: none;
+    border: none;
+    color: var(--White);
+    font-size: 28px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    transition: var(--transition-base);
+}
+
+.close-panel:hover {
+    color: #00a8e8;
+}
+
+.more-panel-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+
+.more-panel-nav li {
+    margin-bottom: 20px;
+}
+
+.more-panel-nav a {
+    color: var(--White);
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: var(--transition-base);
+    display: block;
+}
+
+.more-panel-nav a:hover {
+    color: #00a8e8;
+    padding-left: 10px;
+}
+
+.more-panel-social {
+    display: flex;
+    gap: 15px;
+    margin-top: auto;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.more-panel-social a {
+    color: var(--White);
+    font-size: 20px;
+    transition: var(--transition-base);
+}
+
+.more-panel-social a:hover {
+    color: #00a8e8;
+}
+
+/* More Panel Overlay */
+.more-panel-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    z-index: 1000;
+}
+
+.more-panel-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Body scroll lock */
+body.menu-open {
+    overflow: hidden;
+}
+
+
+/* ========================================
+   Main Content
+   ======================================== */
+
+/* main {
+    min-height: calc(100vh - 200px);
+    padding: var(--spacing-lg) 0;
+} */
+
+/* ========================================
+   HERO BANNER SECTION
+   ======================================== */
+
+.hero-banner {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--White);
+    max-width: 80%;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-family: var(--font-body);
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: var(--White);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ========================================
+   SEARCH BOATS SECTION
+   ======================================== */
+
+.search-boats-section {
+    background-color: var(--Navy);
+    padding: 40px 0;
+    margin-top: -100px;
+    z-index: 2;
+    position: relative;
+}
+
+.search-title {
+    color: var(--White);
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-boats-form {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-form-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    align-items: end;
+}
+
+.search-form-row .form-group {
+    margin-bottom: 0;
+}
+
+.search-form-row .form-control {
+    width: 100%;
+    height: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    background-color: var(--White);
+    color: var(--text-black);
+    transition: var(--transition-base);
+}
+
+.search-form-row .form-control:focus {
+    outline: none;
+    border-color: var(--Aqua-Blue);
+    box-shadow: 0 0 0 3px rgba(66, 128, 160, 0.1);
+}
+
+.search-form-row .form-control::placeholder {
+    color: #999;
+}
+
+.search-btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* ========================================
+   Footer Styles
+   ======================================== */
+
+#footer {
+    background-color: var(--Navy);
+    color: var(--White);
+    padding: var(--spacing-lg) 0;
+    margin-top: var(--spacing-xl);
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 768px) {
+    :root {
+        --font-size-base: 14px;
+    }
+    
+    h1 { 
+        font-size: 36px;
+        line-height: 44px;
+    }
+    
+    h2 { 
+        font-size: 28px;
+        line-height: 36px;
+    }
+    
+    h3 { font-size: 24px; line-height: 32px; }
+    h4 { font-size: 20px; line-height: 28px; }
+    
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { 
+        font-size: 32px;
+        line-height: 40px;
+    }
+    
+    h2 { 
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    h3 { font-size: 20px; line-height: 28px; }
+}

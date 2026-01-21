@@ -1,0 +1,59 @@
+# Script to add required libraries to all HTML page files
+
+$pagesDir = "d:\Haroon\local-work-boats\captain-marine\pages"
+$files = Get-ChildItem -Path $pagesDir -Filter "*.html"
+
+# CSS libraries to add (after title tag)
+$cssLibraries = @"
+    
+    <!-- Bootstrap 4.6.2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    
+    <!-- Owl Carousel 2.3.4 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Font Awesome 4.7.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Custom Styles -->
+"@
+
+# JS libraries to add (before custom scripts)
+$jsLibraries = @"
+
+    <!-- jQuery (required for Bootstrap and Owl Carousel) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    
+    <!-- Bootstrap 4.6.2 JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    
+    <!-- Owl Carousel 2.3.4 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- Custom Scripts -->
+"@
+
+foreach ($file in $files) {
+    $content = Get-Content $file.FullName -Raw
+    
+    # Add CSS libraries after the last <link> tag in head
+    $content = $content -replace '(\s*<link rel="stylesheet" href="\.\./assets/css/style\.css">)', "$cssLibraries`$1"
+    
+    # Add JS libraries before the custom script tag
+    $content = $content -replace '(\s*<script src="\.\./assets/js/main\.js"></script>)', "$jsLibraries`$1"
+    
+    Set-Content -Path $file.FullName -Value $content -NoNewline
+    Write-Host "Updated: $($file.Name)"
+}
+
+Write-Host "`nAll page files updated with required libraries!"
