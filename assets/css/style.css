@@ -24,6 +24,7 @@
     --Navy: #003E66;
     --White: #FFFFFF;
     --text-black: #000000;
+    --Soft-Black: #0A0A0A;
     --text-gray: #6b6b6b;
     --bg-light: #f8f9fa;
     --bg-white: #ffffff;
@@ -1004,7 +1005,7 @@ body.menu-open {
     font-family: "Avenir LT Pro";
     font-size: 28px;
     font-weight: 300;
-    color: var(--Navy);
+    color: var(--Soft-Black);
     margin: 0 0 10px 0;
     letter-spacing: 3.2px;
 }
@@ -1076,12 +1077,15 @@ body.menu-open {
 .service-card-content {
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
     padding: 30px;
     color: var(--White);
     z-index: 2;
     text-align: center;
+    justify-content: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .service-card-title {
