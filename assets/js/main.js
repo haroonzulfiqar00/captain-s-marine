@@ -198,7 +198,27 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize functions
     initSmoothScroll();
+    initStickyHeader();
+    initTestimonialCarousel();
 });
+
+/**
+ * Sticky Header Background Toggle
+ */
+function initStickyHeader() {
+    const header = document.getElementById('main-header');
+    const heroBanner = document.querySelector('.hero-banner');
+    
+    if (!header || !heroBanner) return;
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > heroBanner.offsetHeight - 80) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+}
 
 /**
  * Smooth scrolling for anchor links
@@ -249,3 +269,34 @@ async function fetchData(url, options = {}) {
         return null;
     }
 }
+
+/**
+ * Initialize Testimonial Carousel
+ */
+function initTestimonialCarousel() {
+    if (typeof $.fn.owlCarousel !== 'undefined') {
+        $('.testimonial-carousel').owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 0,
+            nav: true,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 6000,
+            autoplayHoverPause: true,
+            navText: ['‹', '›'], 
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                768: {
+                    items: 1,
+                    nav: true
+                }
+            }
+        });
+    }
+}
+
+
