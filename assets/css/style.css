@@ -2289,11 +2289,29 @@ section.welcome-section {
     border-radius: 8px;
     object-fit: cover;
 }
-
+.globalform .form-control,.globalform textarea {
+    padding: 1.5rem .75rem;
+    border-radius: 4px;
+}
+.globalform .form-control::placeholder,.globalform textarea::placeholder {
+    color: rgba(10, 10, 10, 0.6);
+    font-family: "Avenir LT Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+.globalform label{
+    display: none;
+}
 /* Responsive Design for Additional Services */
 @media (max-width: 991px) {
+    .globalform{
+        padding: 30px 0;
+    }
     .service-tabs-wrapper {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
+        padding: 20px;
     }
     
     .service-tab-btn {
@@ -2309,6 +2327,15 @@ section.welcome-section {
         font-size: 15px;
         line-height: 24px;
     }
+    .service-section{
+    padding: 40px 0;
+}
+.hero-banner-img .hero-content{
+    width: 100%;
+}
+.hero-subtitle{
+    margin-bottom: 20px;
+}
 }
 
 @media (max-width: 767px) {
