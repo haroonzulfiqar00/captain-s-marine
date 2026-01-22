@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 function initStickyHeader() {
     const header = document.getElementById('main-header');
-    const heroBanner = document.querySelector('.hero-banner');
+    const heroBanner = document.querySelector('.scrollclr');
     
     if (!header || !heroBanner) return;
     
