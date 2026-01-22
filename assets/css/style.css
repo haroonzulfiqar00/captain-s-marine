@@ -274,7 +274,8 @@ a:hover {
     right: 0;
     background-color: transparent;
     z-index: 1000;
-    height: 80px;
+    padding: 10px 0;
+    /* height: 80px; */
     transition: background-color 0.3s ease;
 }
 
@@ -296,7 +297,7 @@ a:hover {
 }
 
 .header-logo img {
-    height: 50px;
+    /* height: 50px; */
     width: auto;
 }
 
@@ -340,7 +341,8 @@ a:hover {
 }
 
 .primary-nav a.active {
-    color: #00a8e8;
+    color: #ffffff;
+    border-bottom: 2px solid;
 }
 
 /* Right Side Actions */
@@ -413,18 +415,17 @@ a:hover {
 
 .mega-menu {
     position: fixed;
-    top: 80px;
+    top: 100px;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 65%;
     background-color: var(--White);
-    border-radius: 8px;
+    border-radius: 4px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    padding: 40px;
+    padding: 40px 100px;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 999;
 }
 
@@ -433,93 +434,102 @@ a:hover {
     visibility: visible;
 }
 
-.mega-menu-content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-}
-
-.mega-menu-column h3 {
-    font-family: "FreightBig Pro";
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--Navy);
+.mega-menu .boats-megamenu h3 {
+    color: var(--Aqua-Blue);
+    font-family: "Avenir LT Pro";
+    font-size: 20px;
+    font-weight: 350;
+    line-height: 30px;
     margin-bottom: 20px;
 }
 
-.mega-menu-column ul {
+.mega-menu .boats-megamenu ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.mega-menu-column ul li {
+.mega-menu .boats-megamenu ul li {
     margin-bottom: 12px;
 }
 
-.mega-menu-column ul li a {
-    color: var(--text-black);
+.mega-menu .boats-megamenu ul li a {
+    color: var(--Black---1, #111);
     font-family: "Avenir LT Pro";
-    font-size: 14px;
-    text-decoration: none;
-    transition: var(--transition-base);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
 }
 
-.mega-menu-column ul li a:hover {
+.mega-menu .boats-megamenu ul li a:hover {
     color: var(--Navy);
-    padding-left: 5px;
 }
+
 
 /* Brand Cards */
 .brand-cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
 }
 
 .brand-card {
-    background-color: #f8f9fa;
-    border-radius: 6px;
-    padding: 15px;
-    text-align: center;
+    background-color: transparent;
+    border-radius: 4px;
+    overflow: hidden;
     transition: var(--transition-base);
     text-decoration: none;
     display: block;
+    position: relative;
 }
 
 .brand-card:hover {
-    background-color: #e9ecef;
-    transform: translateY(-2px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .brand-card img {
     width: 100%;
-    height: 60px;
+    /* height: 120px; */
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
+
+/* Gradient overlay from bottom to top */
+.brand-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70%;
+    background: linear-gradient(180deg, rgba(43, 49, 67, 0.00) 0%, rgba(43, 49, 67, 0.90) 100%);
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+/* Logo positioning */
+.brand-logo_nav {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-logo_nav img {
+    width: 100%;
+    height: auto;
     object-fit: contain;
-    margin-bottom: 8px;
+    max-height: 40px;
 }
 
 .brand-card span {
-    display: block;
-    font-family: "Avenir LT Pro";
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--Navy);
-}
-
-/* Mega Menu Overlay */
-.mega-menu-overlay {
-    position: fixed;
-    top: 80px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 998;
+    display: none;
 }
 
 .mega-menu-overlay.active {
@@ -822,10 +832,6 @@ body.menu-open {
 
 /* Tablet - 991px and below */
 @media (max-width: 991px) {
-    /* Header */
-    #main-header {
-        height: 70px;
-    }
     
     .primary-nav {
         gap: 1.5rem;
