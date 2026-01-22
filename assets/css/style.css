@@ -166,7 +166,7 @@ html {
 /* H1 Styling - As per design specs */
 h1 {
     color: var(--White);
-    text-align: center;
+    /* text-align: center; */
     font-family: "FreightBig Pro";
     font-size: 48px;
     font-style: normal;
@@ -2434,8 +2434,34 @@ section.welcome-section {
     letter-spacing: 0.5px;
 }
 
+.financingsec h1{
+    color: var(--White);
+    font-family: "FreightBig Pro";
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+}
+.financingsec h2{
+    color: var(--White);
+    font-family: "Avenir LT Pro";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+}
+.financingsec p{
+    color: var(--White);
+}
+
 /* Responsive Design for Parts Section */
 @media (max-width: 991px) {
+    .financingsec h1{
+    font-size: 32px;
+    line-height: 40px;
+}
+.financingsec h2{
+    font-size: 20px;
+    line-height: 28px;
+}
     .parts-accessories-section {
         padding: 60px 0;
     }
@@ -2470,4 +2496,15 @@ section.welcome-section {
     .parts-card-label h3 {
         font-size: 16px;
     }
+}
+
+@media (max-width: 575px) {
+    .financingsec h1{
+    font-size: 25px;
+    line-height: 32px;
+}
+.financingsec h2{
+    font-size: 18px;
+    line-height: 26px;
+}
 }
