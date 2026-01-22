@@ -356,7 +356,7 @@ a:hover {
     display: inline-block;
     background-color: var(--Aqua-Blue);
     color: var(--White);
-    padding: 15px 25px;
+    padding: 15px 35px;
     border-radius: 4px;
     font-family: "Avenir LT Pro";
     font-size: 16px;
@@ -832,6 +832,13 @@ body.menu-open {
 
 /* Tablet - 991px and below */
 @media (max-width: 991px) {
+    
+.aboutsec h2{
+    font-size: 28px !important;
+    font-weight: 300;
+    line-height: 35px !important; 
+    letter-spacing: 2.5px !important;
+}
     .search-boats-section .search-boat-content{
         width: 100%;
     }
@@ -878,12 +885,17 @@ body.menu-open {
 }
 
 /* Mobile - 768px and below */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     /* Header */
-    #main-header {
+    /* #main-header {
         height: 60px;
-    }
-    
+    } */
+    .aboutsec h2{
+    font-size: 24px !important;
+    font-weight: 300;
+    line-height: 30px !important; 
+    letter-spacing: 2.5px !important;
+}
     .header-logo h2 {
         font-size: 22px;
     }
@@ -1746,7 +1758,6 @@ line-height: 24px;
         gap: 15px;
     }
     .certification-description {
-    font-family: "Avenir LT Pro";
     font-size: 16px;
     color: #000;
     margin: 0;
@@ -2400,18 +2411,10 @@ section.welcome-section {
     background-color: var(--bg-white);
 }
 
-/* .parts-accessories-section h2 {
-    color: var(--Navy);
-    font-family: "FreightBig Pro";
-    font-size: 32px;
-    font-weight: 600;
-    margin-bottom: 50px;
-} */
 
 .parts-card {
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
     cursor: pointer;
     height: 480px;
 }
@@ -2478,12 +2481,12 @@ section.welcome-section {
 /* Responsive Design for Parts Section */
 @media (max-width: 991px) {
     .financingsec h1{
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 32px !important;
+    line-height: 40px !important;
 }
 .financingsec h2{
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 20px !important;
+    line-height: 28px !important;
 }
     .parts-accessories-section {
         padding: 60px 0;
@@ -2675,3 +2678,105 @@ section.welcome-section {
     }
 }
 
+.proshop-brands img {
+    width: 200px;
+    object-fit: contain;
+    height: 60px;
+}
+.proshop-brands-details{
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+}
+/* ========================================
+   VISIT PRO SHOP SECTION
+   ======================================== */
+
+.visit-proshop-section {
+    padding-bottom: 60px;
+    background-color: var(--bg-white);
+}
+
+.proshop-map {
+    width: 100%;
+    height: 100%;
+}
+
+.proshop-map iframe {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.proshop-contact-info {
+    padding-left: 40px;
+}
+
+.proshop-contact-title {
+    color: var(--Navy);
+    font-family: "FreightBig Pro";
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+
+.proshop-address {
+    color: var(--text-black);
+    font-family: "Avenir LT Pro";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+.proshop-hours {
+    color: var(--text-gray);
+    font-family: "Avenir LT Pro";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 15px;
+}
+
+.proshop-phone {
+    color: var(--Navy);
+    font-family: "Avenir LT Pro";
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    transition: var(--transition-base);
+}
+
+.proshop-phone:hover {
+    color: var(--Aqua-Blue);
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .proshop-contact-info {
+        padding-left: 0;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .proshop-contact-title {
+        font-size: 28px;
+    }
+
+    .visit-proshop-section {
+        padding-bottom: 30px 0;
+    }
+}
+.aboutsec h2{
+    color: var(--Navy);
+    font-family: "Avenir LT Pro";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 40px; 
+    letter-spacing: 3.2px;
+    text-transform: uppercase;
+}

@@ -26,14 +26,335 @@
     <link rel="stylesheet" href="../assets/css/style.css"></head>
 
 <body>
-    <!-- Header -->
-    <header id="header">
-        <!-- Header content will go here -->
+    <!-- Main Header -->
+    <header id="main-header">
+        <div class="container-captain-fluid">
+            <!-- Logo -->
+            <div class="header-logo">
+                <a href="/index.html">
+                    <img src="/assets/images/nav-mega-menu/captain-marine-new-logo-white-temp 1.png"
+                        alt="Captain's Marine">
+                </a>
+            </div>
+
+            <!-- Primary Navigation -->
+            <nav>
+                <ul class="primary-nav">
+                    <li>
+                        <a href="#" id="boats-trigger">Boats</a>
+                    </li>
+                    <li>
+                        <a href="pages/service.html">Service</a>
+                    </li>
+                    <li>
+                        <a href="pages/parts.html">Parts</a>
+                    </li>
+                    <li>
+                        <a href="pages/proshop.html">Pro Shop</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Right Side Actions -->
+            <div class="header-actions">
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Mobile Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="#" class="global-cap-btn learning_header d-lg-block d-none">Learning Center</a>
+                <button class="more-menu-trigger" id="more-trigger">
+                    <span>MORE</span>
+                    <div class="hamburger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+        </div>
     </header>
+
+    <!-- Boats Mega Menu -->
+    <div class="mega-menu" id="boats-mega-menu">
+        <div class="mega-menu-content">
+            <!-- Column 1: Inventory -->
+            <div class="mega-menu-column">
+                <h3>Inventory</h3>
+                <ul>
+                    <li><a href="#">All Inventory</a></li>
+                    <li><a href="#">New Boats</a></li>
+                    <li><a href="#">Pre-Owned Boats</a></li>
+                    <li><a href="#">Promotional</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2: By Type -->
+            <div class="mega-menu-column">
+                <h3>By Type</h3>
+                <ul>
+                    <li><a href="#">Surf/Wake/Ski</a></li>
+                    <li><a href="#">Bowrider</a></li>
+                    <li><a href="#">Fishing</a></li>
+                    <li><a href="#">Pontoon</a></li>
+                    <li><a href="#">Cabin Cruiser</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: By Brand -->
+            <div class="mega-menu-column">
+                <h3>By Brand</h3>
+                <div class="brand-cards">
+                    <a href="#" class="brand-card">
+                        <img src="/assets/images/nav-mega-menu/mastercraft-megamenu.png" alt="MasterCraft">
+                        <span>MasterCraft</span>
+                    </a>
+                    <a href="#" class="brand-card">
+                        <img src="/assets/images/nav-mega-menu/cobalt-megamenu.png" alt="Cobalt Boats">
+                        <span>Cobalt Boats</span>
+                    </a>
+                    <a href="#" class="brand-card">
+                        <img src="/assets/images/nav-mega-menu/lund-megamenu.png" alt="Lund">
+                        <span>Lund</span>
+                    </a>
+                    <a href="#" class="brand-card">
+                        <img src="/assets/images/nav-mega-menu/southbay-megamenu.png" alt="South Bay">
+                        <span>South Bay</span>
+                    </a>
+                    <a href="#" class="brand-card">
+                        <img src="/assets/images/nav-mega-menu/weldcraft-megamenu.png" alt="Weldcraft">
+                        <span>Weldcraft</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 4: Shopping Tools -->
+            <div class="mega-menu-column">
+                <h3>Shopping Tools</h3>
+                <ul>
+                    <li><a href="pages/sell-trade.html">Get Your Trade Value</a></li>
+                    <li><a href="pages/financing.html">Get Financing</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mega Menu Overlay -->
+    <div class="mega-menu-overlay" id="mega-menu-overlay"></div>
+
+    <!-- Mobile Accordion Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <img src="/assets/images/nav-mega-menu/captain-marine-new-logo-white-temp 1.png" alt="Captain's Marine"
+                class="mobile-menu-logo">
+            <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close Menu">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
+
+        <nav class="mobile-menu-nav">
+            <!-- Boats Accordion -->
+            <div class="mobile-menu-item">
+                <button class="mobile-menu-trigger">
+                    Boats
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <div class="mobile-submenu">
+                    <div class="mobile-submenu-section">
+                        <h4>Inventory</h4>
+                        <ul>
+                            <li><a href="#">All Inventory</a></li>
+                            <li><a href="#">New Boats</a></li>
+                            <li><a href="#">Pre-Owned Boats</a></li>
+                            <li><a href="#">Promotional</a></li>
+                        </ul>
+                    </div>
+                    <div class="mobile-submenu-section">
+                        <h4>By Type</h4>
+                        <ul>
+                            <li><a href="#">Surf/Wake/Ski</a></li>
+                            <li><a href="#">Bowrider</a></li>
+                            <li><a href="#">Fishing</a></li>
+                            <li><a href="#">Pontoon</a></li>
+                            <li><a href="#">Cabin Cruiser</a></li>
+                        </ul>
+                    </div>
+                    <div class="mobile-submenu-section">
+                        <h4>By Brand</h4>
+                        <ul>
+                            <li><a href="#">MasterCraft</a></li>
+                            <li><a href="#">Cobalt Boats</a></li>
+                            <li><a href="#">Lund</a></li>
+                            <li><a href="#">South Bay</a></li>
+                            <li><a href="#">Weldcraft</a></li>
+                        </ul>
+                    </div>
+                    <div class="mobile-submenu-section">
+                        <h4>Shopping Tools</h4>
+                        <ul>
+                            <li><a href="pages/sell-trade.html">Get Your Trade Value</a></li>
+                            <li><a href="pages/financing.html">Get Financing</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Link -->
+            <div class="mobile-menu-item">
+                <a href="pages/service.html" class="mobile-menu-link">Service</a>
+            </div>
+
+            <!-- Parts Link -->
+            <div class="mobile-menu-item">
+                <a href="pages/parts.html" class="mobile-menu-link">Parts</a>
+            </div>
+
+            <!-- Pro Shop Link -->
+            <div class="mobile-menu-item">
+                <a href="pages/proshop.html" class="mobile-menu-link">Pro Shop</a>
+            </div>
+
+            <!-- Learning Center -->
+            <div class="mt-3">
+                <a href="#" class="mobile-menu-link mobile-menu-highlight">Learning Center</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- MORE Slide-in Panel -->
+    <div class="more-panel" id="more-panel">
+        <div class="more-panel-header">
+            <h3>MORE</h3>
+            <button class="close-panel" id="close-panel">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
+
+        <nav>
+            <ul class="more-panel-nav">
+                <li><a href="pages/about.html">About</a></li>
+                <li><a href="pages/5starcertificate.html">5 Star Certified Dealer</a></li>
+                <li><a href="pages/lakecams.html">Live Lake Cams</a></li>
+                <li><a href="pages/lake-levels.html">Lake Levels</a></li>
+                <li><a href="#">Events</a></li>
+                <li class="pt-lg-5"><a href="pages/history.html">Our History</a></li>
+                <li><a href="pages/crew.html">Meet the Crew / Careers</a></li>
+                <li><a href="pages/testimonials.html">Testimonials</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="more-panel-social">
+            <a href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa fa-youtube"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fa fa-pinterest"></i></a>
+        </div>
+    </div>
+
+    <!-- More Panel Overlay -->
+    <div class="more-panel-overlay" id="more-panel-overlay"></div>
 
     <!-- Main Content -->
     <main>
-        <!-- About page content will go here -->
+        <!-- Hero Banner Section -->
+        <section class="hero-banner-img scrollclr">
+            <img class="hero-img" src="/assets/images/sell-trade/banner-img.jpg" alt="Hero Image">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>About Captain’s Marine</h1>
+                <a href="#search-boats" class="global-cap-btn">Contact Us</a>
+            </div>
+        </section>
+
+        <section class="sugestedcards pt-lg-5 py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="sugestedcards-item text-center">
+                            <h2 class="">Our Mission</h2>
+                            <p>To make your entire boating experience feel effortless, to be your go-to resource for all things boat-related, and to help you create unforgettable memories as fellow boaters.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="sugestedcards-item text-center">
+                            <h2 class="">Our Vision</h2>
+                            <p>To be the benchmark for excellence in every aspect of our business by offering highly reputable services, products, and customer experience.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="sugestedcards-item text-center">
+                            <h2 class="">Our Values</h2>
+                            <p>We believe in honesty in every aspect of life, treating others with respect, and upholding trust and integrity in all we do. We are committed to continuous improvement and take accountability for ourselves and for one another.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section aboutsec">
+            <div class="container">
+                <div class="flex-column-reverse flex-lg-row row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="text-lg-left text-center my-lg-0 my-4">
+                            <h2>Captain’s Marine operates under a simple belief:</h2>
+                            <p class="pr-lg-5 pr-0 mb-2">Boat Owners deserve to experience what stress-free boating truly looks like. That belief drives every process, standard, and decision within our business.</p>
+                            <p class="pr-lg-5 pr-0">What started as a small, energetic shop with a crew of three, has grown into a full-service dealership - well known in the Flathead Valley for its technical expertise, transparency, and  customer service that feels personal from the very first conversation.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="/assets/images/sell-trade/dummyimg.png" alt="Service Image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section aboutsec p-0">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <img src="/assets/images/sell-trade/dummyimg.png" alt="Service Image">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="text-lg-left text-center my-lg-0 my-4">
+                            <h2 class="pl-lg-5 pl-0 ">Our three core principles</h2>
+                            <p class="pl-lg-5 pl-0 mb-2">To make your entire boating experience feel effortless, to be your go-to resource for all things boat-related, and to help you create unforgettable memories as fellow boaters. We show up with patience, honesty, and a genuine desire to guide, not pressure. That’s the foundation behind every recommendation we make and every service we stand behind.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="service-section aboutsec">
+            <div class="container">
+                <div class="flex-column-reverse flex-lg-row row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="text-lg-left text-center my-lg-0 my-4">
+                            <h2>What truly sets us apart</h2>
+                            <p class="pr-lg-5 pr-0 mb-2">Our service and parts advisors, sales people, marketing team, technicians, detailers, and transport crew are all dedicated specialists who take pride in problem solving, clear communication, and getting it right the first time. Most of us grew up on these lakes - and we treat every boat like the prized family possession it is.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="/assets/images/sell-trade/dummyimg.png" alt="Service Image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="container">
+        <section>
+            <div class="container py-lg-5 py-3">
+                <div class="row text-center justify-content-center">
+                    <div class="col-lg-10">
+                        <p class="">These are all the wonderful aspects that make Captain’s Marine a great place to do business, and a great place to work - even awarding us the “MRAA Great Dealership to Work For” Award in 2025. But we weren’t always the robust team we are now.</p>
+                        <div class="text-center mt-4">
+                            <a href="#search-boats" class="global-cap-btn">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -42,19 +363,19 @@
     </footer>
     <!-- jQuery (required for Bootstrap and Owl Carousel) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-    
+
     <!-- Bootstrap 4.6.2 JS Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
     <!-- Owl Carousel 2.3.4 JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+
     <!-- Custom Scripts -->
 
     <script src="../assets/js/main.js"></script>
 </body>
-
 </html>
