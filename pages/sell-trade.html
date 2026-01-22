@@ -26,14 +26,413 @@
     <link rel="stylesheet" href="../assets/css/style.css"></head>
 
 <body>
-    <!-- Header -->
-    <header id="header">
-        <!-- Header content will go here -->
+    <!-- Main Header -->
+    <header id="main-header">
+        <div class="container-captain-fluid">
+            <!-- Logo -->
+            <div class="header-logo">
+                <a href="/index.html">
+                    <img src="/assets/images/nav-mega-menu/captain-marine-new-logo-white-temp 1.png"
+                        alt="Captain's Marine">
+                </a>
+            </div>
+
+            <!-- Primary Navigation -->
+            <nav>
+                <ul class="primary-nav">
+                    <li>
+                        <a href="#" id="boats-trigger">Boats</a>
+                    </li>
+                    <li>
+                        <a href="pages/service.html">Service</a>
+                    </li>
+                    <li>
+                        <a href="pages/parts.html">Parts</a>
+                    </li>
+                    <li>
+                        <a href="pages/proshop.html">Pro Shop</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Right Side Actions -->
+            <div class="header-actions">
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Mobile Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a href="#" class="global-cap-btn learning_header d-lg-block d-none">Learning Center</a>
+                <button class="more-menu-trigger" id="more-trigger">
+                    <span>MORE</span>
+                    <div class="hamburger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+        </div>
     </header>
+
+    <!-- Boats Mega Menu -->
+    <div class="mega-menu" id="boats-mega-menu">
+        <div class="mega-menu-content">
+            <!-- Column 1: Inventory -->
+            <div class="mega-menu-column">
+                <h3>Inventory</h3>
+                <ul>
+                    <li><a href="#">All Inventory</a></li>
+                    <li><a href="#">New Boats</a></li>
+                    <li><a href="#">Pre-Owned Boats</a></li>
+                    <li><a href="#">Promotional</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2: By Type -->
+            <div class="mega-menu-column">
+                <h3>By Type</h3>
+                <ul>
+                    <li><a href="#">Surf/Wake/Ski</a></li>
+                    <li><a href="#">Bowrider</a></li>
+                    <li><a href="#">Fishing</a></li>
+                    <li><a href="#">Pontoon</a></li>
+                    <li><a href="#">Cabin Cruiser</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: By Brand -->
+            <div class="mega-menu-column">
+                <h3>By Brand</h3>
+                <div class="brand-cards">
+                    <a href="#" class="brand-card">
+                        <img src="/assets/images/nav-mega-menu/mastercraft-megamenu.png" alt="MasterCraft">
+                        <span>MasterCraft</span>
+                    </a>
+                    <a href="#" class="brand-card">
+                        <img src="/assets/images/nav-mega-menu/cobalt-megamenu.png" alt="Cobalt Boats">
+                        <span>Cobalt Boats</span>
+                    </a>
+                    <a href="#" class="brand-card">
+                        <img src="/assets/images/nav-mega-menu/lund-megamenu.png" alt="Lund">
+                        <span>Lund</span>
+                    </a>
+                    <a href="#" class="brand-card">
+                        <img src="/assets/images/nav-mega-menu/southbay-megamenu.png" alt="South Bay">
+                        <span>South Bay</span>
+                    </a>
+                    <a href="#" class="brand-card">
+                        <img src="/assets/images/nav-mega-menu/weldcraft-megamenu.png" alt="Weldcraft">
+                        <span>Weldcraft</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 4: Shopping Tools -->
+            <div class="mega-menu-column">
+                <h3>Shopping Tools</h3>
+                <ul>
+                    <li><a href="pages/sell-trade.html">Get Your Trade Value</a></li>
+                    <li><a href="pages/financing.html">Get Financing</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mega Menu Overlay -->
+    <div class="mega-menu-overlay" id="mega-menu-overlay"></div>
+
+    <!-- Mobile Accordion Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <img src="/assets/images/nav-mega-menu/captain-marine-new-logo-white-temp 1.png" alt="Captain's Marine"
+                class="mobile-menu-logo">
+            <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close Menu">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
+
+        <nav class="mobile-menu-nav">
+            <!-- Boats Accordion -->
+            <div class="mobile-menu-item">
+                <button class="mobile-menu-trigger">
+                    Boats
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <div class="mobile-submenu">
+                    <div class="mobile-submenu-section">
+                        <h4>Inventory</h4>
+                        <ul>
+                            <li><a href="#">All Inventory</a></li>
+                            <li><a href="#">New Boats</a></li>
+                            <li><a href="#">Pre-Owned Boats</a></li>
+                            <li><a href="#">Promotional</a></li>
+                        </ul>
+                    </div>
+                    <div class="mobile-submenu-section">
+                        <h4>By Type</h4>
+                        <ul>
+                            <li><a href="#">Surf/Wake/Ski</a></li>
+                            <li><a href="#">Bowrider</a></li>
+                            <li><a href="#">Fishing</a></li>
+                            <li><a href="#">Pontoon</a></li>
+                            <li><a href="#">Cabin Cruiser</a></li>
+                        </ul>
+                    </div>
+                    <div class="mobile-submenu-section">
+                        <h4>By Brand</h4>
+                        <ul>
+                            <li><a href="#">MasterCraft</a></li>
+                            <li><a href="#">Cobalt Boats</a></li>
+                            <li><a href="#">Lund</a></li>
+                            <li><a href="#">South Bay</a></li>
+                            <li><a href="#">Weldcraft</a></li>
+                        </ul>
+                    </div>
+                    <div class="mobile-submenu-section">
+                        <h4>Shopping Tools</h4>
+                        <ul>
+                            <li><a href="pages/sell-trade.html">Get Your Trade Value</a></li>
+                            <li><a href="pages/financing.html">Get Financing</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Link -->
+            <div class="mobile-menu-item">
+                <a href="pages/service.html" class="mobile-menu-link">Service</a>
+            </div>
+
+            <!-- Parts Link -->
+            <div class="mobile-menu-item">
+                <a href="pages/parts.html" class="mobile-menu-link">Parts</a>
+            </div>
+
+            <!-- Pro Shop Link -->
+            <div class="mobile-menu-item">
+                <a href="pages/proshop.html" class="mobile-menu-link">Pro Shop</a>
+            </div>
+
+            <!-- Learning Center -->
+            <div class="mt-3">
+                <a href="#" class="mobile-menu-link mobile-menu-highlight">Learning Center</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- MORE Slide-in Panel -->
+    <div class="more-panel" id="more-panel">
+        <div class="more-panel-header">
+            <h3>MORE</h3>
+            <button class="close-panel" id="close-panel">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
+
+        <nav>
+            <ul class="more-panel-nav">
+                <li><a href="pages/about.html">About</a></li>
+                <li><a href="pages/5starcertificate.html">5 Star Certified Dealer</a></li>
+                <li><a href="pages/lakecams.html">Live Lake Cams</a></li>
+                <li><a href="pages/lake-levels.html">Lake Levels</a></li>
+                <li><a href="#">Events</a></li>
+                <li class="pt-lg-5"><a href="pages/history.html">Our History</a></li>
+                <li><a href="pages/crew.html">Meet the Crew / Careers</a></li>
+                <li><a href="pages/testimonials.html">Testimonials</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="more-panel-social">
+            <a href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa fa-youtube"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fa fa-pinterest"></i></a>
+        </div>
+    </div>
+
+    <!-- More Panel Overlay -->
+    <div class="more-panel-overlay" id="more-panel-overlay"></div>
 
     <!-- Main Content -->
     <main>
-        <!-- Sell & Trade page content will go here -->
+        <!-- Hero Banner Section -->
+        <section class="hero-banner-img scrollclr">
+            <img class="hero-img" src="/assets/images/sell-trade/banner-img.jpg" alt="Hero Image">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Sell/Trade your boat</h1>
+                <a href="#search-boats" class="global-cap-btn">Start Selling My Boat</a>
+            </div>
+        </section>
+
+        <section class="service-section">
+            <div class="container">
+                <div class="flex-column-reverse flex-lg-row row">
+                    <div class="col-lg-6">
+                        <div class="text-lg-left text-center my-lg-0 my-4">
+                            <h2>We Offer Trade and Cash Buy Options</h2>
+                            <p class="pr-lg-5 pr-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <a href="#" class="global-cap-btn mt-lg-4">Start Selling My Boat</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="/assets/images/sell-trade/dummyimg.png" alt="Service Image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="sugestedcards py-lg-4 py-2">
+            <div class="container">
+                <h2 class="text-center pb-3">Our Process is Simple</h2>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="sugestedcards-item">
+                            <h4 class="">1. Tell Us About Your Boat</h4>
+                            <p>Share your boat’s details and condition, and our team will quickly review your submission.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="sugestedcards-item">
+                            <h4 class="">2. Get a Fair Market Offer</h4>
+                            <p>We provide a transparent, competitive offer based on current market values and your boat’s specifics.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="sugestedcards-item">
+                            <h4 class="">3. Sell or Trade With Confidence</h4>
+                            <p>Choose to sell outright or trade toward your next boat, and we handle the paperwork for a smooth, hassle-free process.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="bottom-bg-main globalform">
+            <div class="container">
+                <div class="service-form">
+                    <h2 class="text-center text-light pb-4">Sell / Trade My Boat</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6">
+                            <div class="service-form-content">
+                                <div class="form-group">
+                                    <label for="fname"></label>
+                                    <input type="text" class="form-control require_check" placeholder="First Name*"
+                                        id="fname" name="first_name">
+                                    <div class="field-error" id="error_fname"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lname"></label>
+                                    <input type="text" class="form-control require_check" placeholder="Last Name*"
+                                        id="lname" name="last_name">
+                                    <div class="field-error" id="error_lname"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email"></label>
+                                    <input type="email" class="form-control require_check" placeholder="Email*"
+                                        id="email" name="email">
+                                    <div class="field-error" id="error_email"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone"></label>
+                                    <input type="text" class="form-control require_check" placeholder="Phone*"
+                                        id="phone" name="phone">
+                                    <div class="field-error" id="error_phone"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="address"></label>
+                                    <input type="text" class="form-control require_check" placeholder="Address*"
+                                        id="address" name="address">
+                                    <div class="field-error" id="error_address"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="city"></label>
+                                    <input type="text" class="form-control require_check" placeholder="City*" id="city"
+                                        name="city">
+                                    <div class="field-error" id="error_city"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="state"></label>
+                                            <input type="text" class="form-control require_check" placeholder="State*"
+                                                id="state" name="state">
+                                            <div class="field-error" id="error_state"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="zip_code"></label>
+                                            <input type="text" class="form-control require_check"
+                                                placeholder="Zip Code*" id="zip_code" name="zip_code">
+                                            <div class="field-error" id="error_zip_code"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 class="text-light">Boat Info</h4>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="year"></label>
+                                            <input type="text" class="form-control require_check" placeholder="Year*"
+                                                id="year" name="year">
+                                            <div class="field-error" id="error_year"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="make"></label>
+                                            <input type="text" class="form-control require_check" placeholder="Make*"
+                                                id="make" name="make">
+                                            <div class="field-error" id="error_make"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="model"></label>
+                                            <input type="text" class="form-control require_check" placeholder="Model*"
+                                                id="model" name="model">
+                                            <div class="field-error" id="error_model"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="full_id"></label>
+                                            <input type="text" class="form-control require_check" placeholder="Full ID*"
+                                                id="full_id" name="full_id">
+                                            <div class="field-error" id="error_full_id"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="describe_service_needs"></label>
+                                            <textarea class="w-100" name="describe_service_needs"
+                                                id="describe_service_needs"
+                                                placeholder="Describe Service Needs"></textarea>
+                                        </div>
+                                        <div class="field-error" id="error_describe_service_needs"></div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn global-cap-btn">Send Request</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
@@ -42,16 +441,17 @@
     </footer>
     <!-- jQuery (required for Bootstrap and Owl Carousel) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-    
+
     <!-- Bootstrap 4.6.2 JS Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
     <!-- Owl Carousel 2.3.4 JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+
     <!-- Custom Scripts -->
 
     <script src="../assets/js/main.js"></script>
