@@ -2348,3 +2348,107 @@ section.welcome-section {
         padding: 14px 10px;
     }
 }
+
+/* ========================================
+   PARTS & ACCESSORIES SECTION
+   ======================================== */
+
+.parts-accessories-section {
+    padding: 80px 0;
+    background-color: var(--bg-white);
+}
+
+/* .parts-accessories-section h2 {
+    color: var(--Navy);
+    font-family: "FreightBig Pro";
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 50px;
+} */
+
+.parts-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 480px;
+}
+
+
+.parts-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.parts-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    transition: background 0.3s ease;
+}
+
+.parts-card:hover .parts-card-overlay {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.85) 100%);
+}
+
+.parts-card-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 20px;
+    z-index: 2;
+}
+
+.parts-card-label h3 {
+    color: var(--White);
+    font-family: "Avenir LT Pro";
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Design for Parts Section */
+@media (max-width: 991px) {
+    .parts-accessories-section {
+        padding: 60px 0;
+    }
+    
+    .parts-card {
+        height: 400px;
+    }
+    
+    .parts-card-label h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 767px) {
+    .parts-accessories-section {
+        padding: 40px 0;
+    }
+    
+    .parts-accessories-section h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .parts-card {
+        height: 350px;
+    }
+    
+    .parts-card-label {
+        padding: 20px 15px;
+    }
+    
+    .parts-card-label h3 {
+        font-size: 16px;
+    }
+}
