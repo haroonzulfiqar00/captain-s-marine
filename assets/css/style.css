@@ -750,63 +750,69 @@ body.menu-open {
 
 .search-boats-section {
     background-color: var(--Navy);
-    padding: 40px 0 !important;
+    padding: 50px 0 !important;
     margin-top: -100px;
     z-index: 2;
     position: relative;
+}
+.search-boats-section .search-boat-content {
+    width: 80%;
+    margin: 0 auto;
 }
 
 .search-title {
     color: var(--White);
     font-family: "FreightBig Pro";
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
 }
 
 .search-boats-form {
     max-width: 1200px;
     margin: 0 auto;
 }
-
-.search-form-row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    align-items: end;
-}
-
-.search-form-row .form-group {
-    margin-bottom: 0;
-}
-
-.search-form-row .form-control {
-    width: 100%;
-    height: 100%;
-    padding: 12px 15px;
-    border: 1px solid #fff;
-    border-radius: 4px;
-    font-family: "Avenir LT Pro";
-    font-size: 16px;
+.search-boats-form .form-control {
+    height: 100% !important; 
+    padding: 15px;
     background-color: transparent;
     color: var(--White);
-    transition: var(--transition-base);
+    font-family: "Avenir LT Pro";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
 }
-
-.search-form-row .form-control:focus {
+.search-boats-form .form-control:focus {
     outline: none;
-    border-color: var(--Aqua-Blue);
-    box-shadow: 0 0 0 3px rgba(66, 128, 160, 0.1);
+    border-color: rgba(255, 255, 255, 0.9);
+    box-shadow: none;
 }
 
-.search-form-row .form-control::placeholder {
-    color: #999;
+.search-boats-form .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-boats-form select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23ffffff' d='M1.41 0L6 4.58 10.59 0 12 1.42l-6 6-6-6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+}
+
+.search-boats-form select.form-control option {
+    background-color: #003E66;
+    color: var(--White);
 }
 
 .search-btn {
     width: 100%;
-    padding: 12px 20px;
+    height: 50px;
+    padding: 14px 20px;
     font-size: 16px;
     font-weight: 600;
     border: none;
@@ -818,12 +824,6 @@ body.menu-open {
    Footer Styles
    ======================================== */
 
-/* #footer {
-    background-color: var(--Navy);
-    color: var(--White);
-    padding: var(--spacing-lg) 0;
-    margin-top: var(--spacing-xl);
-} */
 
 /* ========================================
    RESPONSIVE DESIGN - MEDIA QUERIES
@@ -832,7 +832,9 @@ body.menu-open {
 
 /* Tablet - 991px and below */
 @media (max-width: 991px) {
-    
+    .search-boats-section .search-boat-content{
+        width: 100%;
+    }
     .primary-nav {
         gap: 1.5rem;
     }
@@ -1135,7 +1137,7 @@ body.menu-open {
     font-size: 28px;
     font-weight: 300;
     color: var(--Soft-Black);
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
     letter-spacing: 3.2px;
 }
 
@@ -1150,17 +1152,16 @@ body.menu-open {
 
 .certification-link {
     flex-shrink: 0;
-    color: var(--Aqua-Blue);
+    color: var(--Navy);
     font-family: "Avenir LT Pro";
     font-size: 16px;
     font-weight: 600;
     text-decoration: none;
-    transition: var(--transition-base);
+    border-bottom: 1px solid transparent;
 }
 
 .certification-link:hover {
-    color: var(--Navy);
-    text-decoration: none;
+    border-bottom: 1px solid var(--Navy);
 }
 
 /* Service Cards Grid */
@@ -1383,7 +1384,7 @@ letter-spacing: 0.64px;
 }
 
 .testimonial-text {
-    font-family: 'Avenir LT Pro', sans-serif;
+    font-family: 'Avenir LT Pro';
     font-size: 16px;
     line-height: 1.8;
     color: var(--White);
@@ -1395,7 +1396,7 @@ letter-spacing: 0.64px;
 }
 
 .testimonial-author {
-    font-family: 'Avenir LT Pro', sans-serif;
+    font-family: 'Avenir LT Pro';
     font-size: 14px;
     font-weight: 600;
     color: var(--White);
@@ -1538,7 +1539,7 @@ letter-spacing: 0.64px;
 }
 
 .newsletter-subtitle {
-    font-family: 'Avenir LT Pro', sans-serif;
+    font-family: 'Avenir LT Pro';
     font-size: 14px;
     color: rgba(255, 255, 255);
     margin-bottom: 30px;
@@ -1555,7 +1556,7 @@ letter-spacing: 0.64px;
     padding: 12px 20px;
     border: none;
     border-radius: 0;
-    font-family: 'Avenir LT Pro', sans-serif;
+    font-family: 'Avenir LT Pro';
     font-size: 14px;
     background: var(--White);
     color: var(--text-black);
@@ -1621,15 +1622,20 @@ letter-spacing: 0.64px;
 .footer-company {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
 }
 
 .footer-logo {
-    max-width: 200px;
+    max-width: 100%;
+    width: 80%;
     margin-bottom: 20px;
+    margin: 0 auto;
 }
 
 .footer-address {
-    font-family: 'Avenir LT Pro', sans-serif;
+    font-family: 'Avenir LT Pro';
     font-size: 14px;
     font-style: normal;
     color: rgba(255, 255, 255, 0.8);
@@ -1638,7 +1644,7 @@ letter-spacing: 0.64px;
 }
 
 .footer-phone {
-    font-family: 'Avenir LT Pro', sans-serif;
+    font-family: 'Avenir LT Pro';
     font-size: 18px;
     font-weight: 600;
     color: var(--White);
@@ -1655,6 +1661,7 @@ letter-spacing: 0.64px;
 .footer-badge {
     max-width: 80px;
     margin-top: 10px;
+    margin: 0 auto;
 }
 
 .footer-heading {
@@ -1665,7 +1672,7 @@ font-size: 20px;
 font-style: normal;
 font-weight: 350;
 line-height: 30px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .footer-links {
@@ -1732,6 +1739,12 @@ line-height: 24px;
 
 /* Responsive */
 @media (max-width: 991px) {
+    .search-boats-form {
+        padding: 15px;
+    }
+    .search-boats-form .row{
+        gap: 15px;
+    }
     .certification-description {
     font-family: "Avenir LT Pro";
     font-size: 16px;
@@ -1765,8 +1778,8 @@ line-height: 24px;
     }
     
     .footer-heading {
-        font-size: 14px;
-        margin-bottom: 15px;
+        font-size: 16px;
+        /* margin-bottom: 15px; */
     }
     
     .footer-links a {
@@ -1872,7 +1885,7 @@ line-height: 24px;
     background: transparent;
     border: none;
     color: var(--White);
-    font-family: 'Avenir LT Pro', sans-serif;
+    font-family: 'Avenir LT Pro';
     font-size: 18px;
     font-weight: 600;
     padding: 15px 20px;
@@ -1894,7 +1907,7 @@ line-height: 24px;
 .mobile-menu-link {
     display: block;
     color: var(--White);
-    font-family: 'Avenir LT Pro', sans-serif;
+    font-family: 'Avenir LT Pro';
     font-size: 18px;
     font-weight: 600;
     padding: 15px 20px;
@@ -1930,7 +1943,7 @@ line-height: 24px;
 }
 
 .mobile-submenu-section h4 {
-    font-family: 'Avenir LT Pro', sans-serif;
+    font-family: 'Avenir LT Pro';
     font-size: 14px;
     font-weight: 600;
     color: rgba(255, 255, 255, 0.7);
@@ -1953,7 +1966,7 @@ line-height: 24px;
 
 .mobile-submenu-section a {
     color: var(--White);
-    font-family: 'Avenir LT Pro', sans-serif;
+    font-family: 'Avenir LT Pro';
     font-size: 15px;
     text-decoration: none;
 }
@@ -2118,9 +2131,11 @@ section.welcome-section {
     .footer-heading {
         cursor: pointer;
         position: relative;
-        margin-bottom: 0;
+        margin: 0;
         padding: 10px 0;
         user-select: none;
+        font-size: 18px;
+        color: var(--White);
     }
     
     .footer-accordion-icon {
@@ -2147,8 +2162,10 @@ section.welcome-section {
         text-align: center;
     }
     
-    .footer-links li {
-        margin-bottom: 12px;
+       .footer-links li {
+        padding: 15px 0;
+        font-size: 16px;
+        border-bottom: 1px solid #ffffff1f;
     }
     
     .footer-company {
