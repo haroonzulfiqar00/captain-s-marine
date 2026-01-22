@@ -2,11 +2,112 @@
    CUSTOM FONT IMPORTS
    ======================================== */
 
-/* FreightBig Pro - For Headings */
-@import url('../fonts/FreightBigPro/stylesheet.css');
+/* FreightBig Pro - Unified Font Family */
+/* Light - 300 */
+@font-face {
+    font-family: 'FreightBig Pro';
+    src: url('../fonts/FreightBigPro/FreightBigProLight-Regular.woff2') format('woff2'),
+         url('../fonts/FreightBigPro/FreightBigProLight-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
 
-/* Avenir LT Pro - For Body Text */
-@import url('../fonts/avenir-lt-pro/stylesheet.css');
+/* Book - 400 (normal) */
+@font-face {
+    font-family: 'FreightBig Pro';
+    src: url('../fonts/FreightBigPro/FreightBigProBook-Regular.woff2') format('woff2'),
+         url('../fonts/FreightBigPro/FreightBigProBook-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Medium - 500 */
+@font-face {
+    font-family: 'FreightBig Pro';
+    src: url('../fonts/FreightBigPro/FreightBigProMedium-Regular.woff2') format('woff2'),
+         url('../fonts/FreightBigPro/FreightBigProMedium-Regular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Semibold - 600 */
+@font-face {
+    font-family: 'FreightBig Pro';
+    src: url('../fonts/FreightBigPro/FreightBigProSemibold-Regular.woff2') format('woff2'),
+         url('../fonts/FreightBigPro/FreightBigProSemibold-Regular.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Bold - 700 */
+@font-face {
+    font-family: 'FreightBig Pro';
+    src: url('../fonts/FreightBigPro/FreightBigProBold-Regular.woff2') format('woff2'),
+         url('../fonts/FreightBigPro/FreightBigProBold-Regular.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Black - 900 */
+@font-face {
+    font-family: 'FreightBig Pro';
+    src: url('../fonts/FreightBigPro/FreightBigProBlack-Regular.woff2') format('woff2'),
+         url('../fonts/FreightBigPro/FreightBigProBlack-Regular.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Avenir LT Pro - Unified Font Family */
+/* Book - 400 (normal) */
+@font-face {
+    font-family: 'Avenir LT Pro';
+    src: url('../fonts/avenir-lt-pro/AvenirLTProBook.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Roman - 500 */
+@font-face {
+    font-family: 'Avenir LT Pro';
+    src: url('../fonts/avenir-lt-pro/AvenirLTProRoman.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Medium - 600 */
+@font-face {
+    font-family: 'Avenir LT Pro';
+    src: url('../fonts/avenir-lt-pro/AvenirLTProMedium.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Heavy - 700 */
+@font-face {
+    font-family: 'Avenir LT Pro';
+    src: url('../fonts/avenir-lt-pro/AvenirLTProHeavy.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Black - 900 */
+@font-face {
+    font-family: 'Avenir LT Pro';
+    src: url('../fonts/avenir-lt-pro/AvenirLTProBlack.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
 
 /* ========================================
    CSS Reset & Base Styles
@@ -89,8 +190,8 @@ h2 {
 /* H3-H6 using Avenir LT Pro */
 h3, h4, h5, h6 {
     font-family: "Avenir LT Pro";
-    color: var(--Navy);
-    margin-bottom: var(--spacing-sm);
+    color: var(--Soft-Black);
+    margin: var(--spacing-sm) 0;
 }
 
 h3 { 
@@ -249,7 +350,8 @@ a:hover {
     gap: 1.5rem;
 }
 
-.global-btn {
+.global-cap-btn {
+    display: inline-block;
     background-color: var(--Aqua-Blue);
     color: var(--White);
     padding: 15px 25px;
@@ -261,9 +363,10 @@ a:hover {
     transition: var(--transition-base);
     border: 1px solid transparent;
     letter-spacing: 0.32px;
+    cursor: pointer;
 }
 
-.global-btn:hover {
+.global-cap-btn:hover {
     background-color: var(--Navy);
     color: var(--White);
     text-decoration: none;
@@ -558,7 +661,7 @@ body.menu-open {
 
 .hero-banner {
     position: relative;
-    height: 70vh;
+    height: 95vh;
     min-height: 500px;
     display: flex;
     align-items: center;
@@ -600,17 +703,15 @@ body.menu-open {
     font-size: 48px;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 12px;
 }
 
 .hero-subtitle {
     font-family: "Avenir LT Pro";
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 400;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     color: var(--White);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -655,12 +756,12 @@ body.menu-open {
     width: 100%;
     height: 100%;
     padding: 12px 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #fff;
     border-radius: 4px;
     font-family: "Avenir LT Pro";
-    font-size: 14px;
-    background-color: var(--White);
-    color: var(--text-black);
+    font-size: 16px;
+    background-color: transparent;
+    color: var(--White);
     transition: var(--transition-base);
 }
 
@@ -903,7 +1004,6 @@ body.menu-open {
 .brand-item {
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: var(--transition-base);
     cursor: pointer;
@@ -928,7 +1028,7 @@ body.menu-open {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(180deg, rgba(10, 10, 10, 0.00) 0%, rgba(10, 10, 10, 0.90) 100%);
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.00) 0%, rgba(10, 10, 10, 0.50) 100%);
     transition: var(--transition-base);
     z-index: 1;
 }
@@ -1016,10 +1116,11 @@ body.menu-open {
 
 .certification-description {
     font-family: "Avenir LT Pro";
-    font-size: 16px;
-    color: #666;
+    font-size: 20px;
+    color: #000;
     margin: 0;
     line-height: 1.6;
+    width: 81%;
 }
 
 .certification-link {
@@ -1111,15 +1212,14 @@ body.menu-open {
 
 .service-card-btn {
     display: inline-block;
-    transition: var(--transition-base);
 }
 
-.service-card-btn:hover {
-    transform: translateX(5px);
-}
 
-.service-card-btn svg {
-    display: block;
+.service-card-btn img {
+    visibility: hidden;
+}
+.service-card-btn img:hover {
+    visibility: visible;
 }
 
 /* ========================================
@@ -1607,6 +1707,14 @@ line-height: 24px;
 
 /* Responsive */
 @media (max-width: 991px) {
+    .certification-description {
+    font-family: "Avenir LT Pro";
+    font-size: 16px;
+    color: #000;
+    margin: 0;
+    line-height: 1.6;
+    width: 100%;
+}
     .newsletter-title {
         font-size: 30px;
     }
@@ -1951,7 +2059,7 @@ section.welcome-section {
 
 
 /* Ensure brand logos are always visible */
-.brand-logo {
+/* .brand-logo {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1962,7 +2070,7 @@ section.welcome-section {
     pointer-events: none;
     opacity: 1 !important;
     display: block !important;
-}
+} */
 
 
 /* Footer Accordion for Mobile */
@@ -1979,7 +2087,7 @@ section.welcome-section {
     
     .footer-accordion-item {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 15px 0;
+        padding: 15px;
     }
     
     .footer-heading {
@@ -2025,3 +2133,191 @@ section.welcome-section {
     }
 }
 
+/* service page css */
+.hero-banner-img {
+    position: relative;
+    height: 65vh;
+    overflow: hidden;
+}
+
+.hero-banner-img  .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-banner-img .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.hero-banner-img .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--White);
+}
+.service-section{
+    padding: 60px 0;
+}
+.service-section img{
+    width: 100%;
+}
+
+/* Service Card Button Hover Effect */
+.certification-section .service-card-btn img {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.certification-section .service-card:hover .service-card-btn img {
+    visibility: visible;
+    opacity: 1;
+}
+.Seekingcards .sugestedcards-item{
+    text-align: center !important;
+}
+
+/* Additional Services Section */
+.additional-services-section {
+    background-color: #f8f9fa;
+}
+
+.service-tabs-wrapper {
+    background-color: var(--Navy);
+    padding: 40px;
+    height: 100%;
+}
+
+.service-tabs-title {
+    color: var(--White);
+    font-family: "FreightBig Pro";
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.service-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.service-tab-btn {
+    background-color: rgba(66, 129, 160, 0.08);
+    color: var(--White);
+    border: none;
+    padding: 18px 15px;
+    text-align: left;
+    font-family: "Avenir LT Pro";
+    font-size: 20px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-tab-btn:hover {
+    background-color: rgba(66, 129, 160, 0.24);
+}
+
+.service-tab-btn.active {
+    background-color: rgba(66, 129, 160, 0.24);
+    color: var(--White);
+}
+
+.service-tab-btn i {
+    font-size: 12px;
+}
+
+
+.service-tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.service-tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.additional-services-section h4{
+    color: var(--White);
+    font-weight: 400;
+}
+.service-content-title {
+    color: var(--Navy);
+    font-family: "Avenir LT Pro";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.service-content-text {
+    color: var(--text-black);
+    font-family: "Avenir LT Pro";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 25px;
+}
+
+.service-content-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Responsive Design for Additional Services */
+@media (max-width: 991px) {
+    .service-tabs-wrapper {
+        margin-bottom: 30px;
+    }
+    
+    .service-tab-btn {
+        font-size: 15px;
+        padding: 15px 12px;
+    }
+    
+    .service-content-title {
+        font-size: 18px;
+    }
+    
+    .service-content-text {
+        font-size: 15px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .service-tabs-title {
+        font-size: 20px;
+    }
+    
+    .service-tab-btn {
+        font-size: 14px;
+        padding: 14px 10px;
+    }
+}

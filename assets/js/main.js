@@ -200,7 +200,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
     initStickyHeader();
     initTestimonialCarousel();
-    initMobileMenu();`r`n    initFooterAccordion();
+    initMobileMenu();
+    initFooterAccordion();
 });
 
 /**
@@ -431,4 +432,43 @@ function initFooterAccordion() {
         });
     });
 }
+
+/* ========================================
+   ADDITIONAL SERVICES TABS
+   ======================================== */
+
+/**
+ * Initialize Service Tabs
+ */
+document.addEventListener('DOMContentLoaded', function() {
+    const tabButtons = document.querySelectorAll('.service-tab-btn');
+    const tabContents = document.querySelectorAll('.service-tab-content');
+    
+    if (tabButtons.length > 0) {
+        tabButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                const targetTab = this.getAttribute('data-tab');
+                
+                // Remove active class from all buttons
+                tabButtons.forEach(function(btn) {
+                    btn.classList.remove('active');
+                });
+                
+                // Remove active class from all content
+                tabContents.forEach(function(content) {
+                    content.classList.remove('active');
+                });
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Add active class to corresponding content
+                const targetContent = document.getElementById(targetTab);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+    }
+});
 
