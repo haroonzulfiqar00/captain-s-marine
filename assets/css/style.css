@@ -275,7 +275,7 @@
     --text-gray: #6b6b6b;
     --bg-light: #f8f9fa;
     --bg-white: #ffffff;
-    --border-color: #e0e0e0;
+    --border-color: #548AA9;
     
     --font-size-base: 16px;
     --line-height-base: 1.6;
@@ -310,6 +310,11 @@ html {
    ======================================== */
 
 /* H1 Styling - As per design specs */
+hr{
+    border: none;
+    height: 1px;
+    background-color: var(--border-color);
+}
 h1 {
     color: var(--White);
     /* text-align: center; */
@@ -3073,6 +3078,68 @@ section.welcome-section {
 .ssosec .sugestedcards-item ul li{
     margin-bottom: 10px;
 }
+
+/* ========================================
+   LIVE LAKE WEBCAMS SECTION
+   ======================================== */
+
+.lakecams-section {
+    background-color: var(--bg-white);
+}
+
+.webcam-card {
+    background-color: var(--White);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+
+.webcam-frame {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+.webcam-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.webcam-title {
+    font-family: 'Venti CF';
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--Soft-Black);
+    text-align: left;
+    padding: 20px 15px;
+    margin: 0;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.webcam-card a {
+    text-decoration: none;
+    display: block;
+}
+
+.webcam-card a:hover .webcam-title {
+    color: var(--Aqua-Blue);
+}
+
+@media (max-width: 768px) {
+    .webcam-title {
+        font-size: 14px;
+        padding: 15px 10px;
+    }
+}
+
 @media (max-width: 576px) {
     .timeline-card {
         max-width: 100%;
@@ -3085,5 +3152,136 @@ section.welcome-section {
     
     .timeline-content p {
         font-size: 14px;
+    }
+}
+
+/* ========================================
+   CREW MEMBER CARDS SECTION
+   ======================================== */
+
+.crew-cards-section {
+    background-color: transparent;
+}
+
+.crew-card {
+    background-color: transparent;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.crew-image {
+    width: 100%;
+    /* aspect-ratio: 3/4; */
+    height: 320px;
+    overflow: hidden;
+    background-color: #ddd;
+}
+
+.crew-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.crew-info {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.crew-name {
+    font-family: 'Avenir LT Pro';
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--White);
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.crew-position {
+    font-family: 'Avenir LT Pro';
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--White);
+    margin: 0 0 5px 0;
+}
+
+.crew-phone {
+    font-family: 'Avenir LT Pro';
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--White);
+    margin: 0 0 15px 0;
+}
+
+.crew-description {
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    padding-top: 20px;
+    font-family: 'Avenir LT Pro';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--White);
+    margin: 0 0 20px 0;
+    flex-grow: 1;
+}
+
+.crew-interview-btn {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    font-family: 'venti cf';
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--White);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.crew-interview-btn i {
+    font-size: 24px;
+}
+.crew-interview-btn .fa {
+    color: #548AA9;
+}
+
+.crew-interview-btn:hover {
+    color: #548AA9;
+    text-decoration: none;
+}
+.crew-bottomsec{
+    padding: 60px 0;
+    text-align: center;
+}
+.crew-bottomsec h2{
+    color: var(--White);
+    text-align: center;
+    font-family: "Venti CF";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 40px;
+    letter-spacing: 0.64px;
+}
+.crew-bottomsec p{
+    color: var(--White);
+    font-family: "Avenir LT Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.64px;
+}
+@media (max-width: 768px) {
+    .crew-name {
+        font-size: 16px;
+    }
+    
+    .crew-description {
+        font-size: 13px;
     }
 }
