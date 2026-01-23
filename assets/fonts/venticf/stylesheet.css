@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'Venti CF';
+    src: url('VentiCF-Light.eot');
+    src: local('Venti CF Light'), local('VentiCF-Light'),
+        url('VentiCF-Light.eot?#iefix') format('embedded-opentype'),
+        url('VentiCF-Light.woff2') format('woff2'),
+        url('VentiCF-Light.woff') format('woff'),
+        url('VentiCF-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Venti CF';
+    src: url('VentiCF-Bold.eot');
+    src: local('Venti CF Bold'), local('VentiCF-Bold'),
+        url('VentiCF-Bold.eot?#iefix') format('embedded-opentype'),
+        url('VentiCF-Bold.woff2') format('woff2'),
+        url('VentiCF-Bold.woff') format('woff'),
+        url('VentiCF-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Venti CF';
+    src: url('VentiCF-LightOblique.eot');
+    src: local('Venti CF Light Oblique'), local('VentiCF-LightOblique'),
+        url('VentiCF-LightOblique.eot?#iefix') format('embedded-opentype'),
+        url('VentiCF-LightOblique.woff2') format('woff2'),
+        url('VentiCF-LightOblique.woff') format('woff'),
+        url('VentiCF-LightOblique.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Venti CF';
+    src: url('VentiCF-ExtraBoldOblique.eot');
+    src: local('Venti CF Extra Bold Oblique'), local('VentiCF-ExtraBoldOblique'),
+        url('VentiCF-ExtraBoldOblique.eot?#iefix') format('embedded-opentype'),
+        url('VentiCF-ExtraBoldOblique.woff2') format('woff2'),
+        url('VentiCF-ExtraBoldOblique.woff') format('woff'),
+        url('VentiCF-ExtraBoldOblique.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Venti CF';
+    src: url('VentiCF-ExtraBold.eot');
+    src: local('Venti CF Extra Bold'), local('VentiCF-ExtraBold'),
+        url('VentiCF-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('VentiCF-ExtraBold.woff2') format('woff2'),
+        url('VentiCF-ExtraBold.woff') format('woff'),
+        url('VentiCF-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Venti CF';
+    src: url('VentiCF-Medium.eot');
+    src: local('Venti CF Medium'), local('VentiCF-Medium'),
+        url('VentiCF-Medium.eot?#iefix') format('embedded-opentype'),
+        url('VentiCF-Medium.woff2') format('woff2'),
+        url('VentiCF-Medium.woff') format('woff'),
+        url('VentiCF-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Venti CF';
+    src: url('VentiCF-DemiBold.eot');
+    src: local('Venti CF Demi Bold'), local('VentiCF-DemiBold'),
+        url('VentiCF-DemiBold.eot?#iefix') format('embedded-opentype'),
+        url('VentiCF-DemiBold.woff2') format('woff2'),
+        url('VentiCF-DemiBold.woff') format('woff'),
+        url('VentiCF-DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Venti CF';
+    src: url('VentiCF-UltraOblique.eot');
+    src: local('Venti CF Ultra Oblique'), local('VentiCF-UltraOblique'),
+        url('VentiCF-UltraOblique.eot?#iefix') format('embedded-opentype'),
+        url('VentiCF-UltraOblique.woff2') format('woff2'),
+        url('VentiCF-UltraOblique.woff') format('woff'),
+        url('VentiCF-UltraOblique.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Venti CF';
+    src: url('VentiCF-MediumOblique.eot');
+    src: local('Venti CF Medium Oblique'), local('VentiCF-MediumOblique'),
+        url('VentiCF-MediumOblique.eot?#iefix') format('embedded-opentype'),
+        url('VentiCF-MediumOblique.woff2') format('woff2'),
+        url('VentiCF-MediumOblique.woff') format('woff'),
+        url('VentiCF-MediumOblique.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Venti CF';
+    src: url('VentiCF-BoldOblique.eot');
+    src: local('Venti CF Bold Oblique'), local('VentiCF-BoldOblique'),
+        url('VentiCF-BoldOblique.eot?#iefix') format('embedded-opentype'),
+        url('VentiCF-BoldOblique.woff2') format('woff2'),
+        url('VentiCF-BoldOblique.woff') format('woff'),
+        url('VentiCF-BoldOblique.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Venti CF';
+    src: url('VentiCF-DemiBoldOblique.eot');
+    src: local('Venti CF Demi Bold Oblique'), local('VentiCF-DemiBoldOblique'),
+        url('VentiCF-DemiBoldOblique.eot?#iefix') format('embedded-opentype'),
+        url('VentiCF-DemiBoldOblique.woff2') format('woff2'),
+        url('VentiCF-DemiBoldOblique.woff') format('woff'),
+        url('VentiCF-DemiBoldOblique.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Venti CF';
+    src: url('VentiCF-ThinOblique.eot');
+    src: local('Venti CF Thin Oblique'), local('VentiCF-ThinOblique'),
+        url('VentiCF-ThinOblique.eot?#iefix') format('embedded-opentype'),
+        url('VentiCF-ThinOblique.woff2') format('woff2'),
+        url('VentiCF-ThinOblique.woff') format('woff'),
+        url('VentiCF-ThinOblique.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Venti CF';
+    src: url('VentiCF-Ultra.eot');
+    src: local('Venti CF Ultra'), local('VentiCF-Ultra'),
+        url('VentiCF-Ultra.eot?#iefix') format('embedded-opentype'),
+        url('VentiCF-Ultra.woff2') format('woff2'),
+        url('VentiCF-Ultra.woff') format('woff'),
+        url('VentiCF-Ultra.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Venti CF';
+    src: url('VentiCF-Thin.eot');
+    src: local('Venti CF Thin'), local('VentiCF-Thin'),
+        url('VentiCF-Thin.eot?#iefix') format('embedded-opentype'),
+        url('VentiCF-Thin.woff2') format('woff2'),
+        url('VentiCF-Thin.woff') format('woff'),
+        url('VentiCF-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+

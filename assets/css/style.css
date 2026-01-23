@@ -109,6 +109,152 @@
     font-display: swap;
 }
 
+/* Venti CF - Unified Font Family */
+/* Thin - 100 */
+@font-face {
+    font-family: 'Venti CF';
+    src: url('../fonts/venticf/VentiCF-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Thin Oblique - 100 */
+@font-face {
+    font-family: 'Venti CF';
+    src: url('../fonts/venticf/VentiCF-ThinOblique.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Light - 300 */
+@font-face {
+    font-family: 'Venti CF';
+    src: url('../fonts/venticf/VentiCF-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Light Oblique - 300 */
+@font-face {
+    font-family: 'Venti CF';
+    src: url('../fonts/venticf/VentiCF-LightOblique.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Medium - 500 */
+@font-face {
+    font-family: 'Venti CF';
+    src: url('../fonts/venticf/VentiCF-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Medium Oblique - 500 */
+@font-face {
+    font-family: 'Venti CF';
+    src: url('../fonts/venticf/VentiCF-MediumOblique.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* DemiBold - 600 */
+@font-face {
+    font-family: 'Venti CF';
+    src: url('../fonts/venticf/VentiCF-DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* DemiBold Oblique - 600 */
+@font-face {
+    font-family: 'Venti CF';
+    src: url('../fonts/venticf/VentiCF-DemiBoldOblique.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Bold - 700 */
+@font-face {
+    font-family: 'Venti CF';
+    src: url('../fonts/venticf/VentiCF-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Bold Oblique - 700 */
+@font-face {
+    font-family: 'Venti CF';
+    src: url('../fonts/venticf/VentiCF-BoldOblique.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ExtraBold - 800 */
+@font-face {
+    font-family: 'Venti CF';
+    src: url('../fonts/venticf/VentiCF-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ExtraBold Oblique - 800 */
+@font-face {
+    font-family: 'Venti CF';
+    src: url('../fonts/venticf/VentiCF-ExtraBoldOblique.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Ultra - 900 */
+@font-face {
+    font-family: 'Venti CF';
+    src: url('../fonts/venticf/VentiCF-Ultra.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Ultra Oblique - 900 */
+@font-face {
+    font-family: 'Venti CF';
+    src: url('../fonts/venticf/VentiCF-UltraOblique.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Hanley Pro - Unified Font Family */
+/* Sans - Regular - 400 */
+@font-face {
+    font-family: 'Hanley Pro';
+    src: url('../fonts/HanleyPro-Sans/Hanley-Pro-Sans.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Block - Bold - 700 */
+@font-face {
+    font-family: 'Hanley Pro';
+    src: url('../fonts/HanleyPro-Sans/Hanley-Pro-Block.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* ========================================
    CSS Reset & Base Styles
    ======================================== */
@@ -121,8 +267,8 @@
 
 :root {
     /* Color Palette */
-    --Aqua-Blue: #4280A0;
-    --Navy: #003E66;
+    --Aqua-Blue: #548AA9;
+    --Navy: #003E67;
     --White: #FFFFFF;
     --text-black: #000000;
     --Soft-Black: #0A0A0A;
@@ -167,7 +313,7 @@ html {
 h1 {
     color: var(--White);
     /* text-align: center; */
-    font-family: "FreightBig Pro";
+    font-family: 'Hanley Pro';
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
@@ -178,10 +324,10 @@ h1 {
 /* H2 Styling - As per design specs */
 h2 {
     color: var(--Navy);
-    font-family: "FreightBig Pro";
+    font-family: "Venti CF";
     font-size: 32px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 900;
     line-height: 40px; /* 125% */
     letter-spacing: 0.64px;
     margin-bottom: var(--spacing-sm);
@@ -189,32 +335,32 @@ h2 {
 
 /* H3-H6 using Avenir LT Pro */
 h3, h4, h5, h6 {
-    font-family: "Avenir LT Pro";
+    font-family: "Venti CF";
     color: var(--Soft-Black);
     margin: var(--spacing-sm) 0;
 }
 
 h3 { 
     font-size: 28px;
-    font-weight: 600;
+    font-weight: 900;
     line-height: 36px;
 }
 
 h4 { 
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 900;
     line-height: 32px;
 }
 
 h5 { 
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 900;
     line-height: 28px;
 }
 
 h6 { 
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 900;
     line-height: 24px;
 }
 
@@ -358,21 +504,22 @@ a:hover {
     color: var(--White);
     padding: 15px 35px;
     border-radius: 4px;
-    font-family: "Avenir LT Pro";
-    font-size: 16px;
-    font-weight: 500;
+    font-family: "Venti CF";
+    font-size: 18px;
+    font-weight: 900;
     text-decoration: none;
-    transition: var(--transition-base);
     border: 1px solid transparent;
     letter-spacing: 0.32px;
     cursor: pointer;
 }
 
 .global-cap-btn:hover {
-    background-color: var(--Navy);
+    /* background-color: var(--Navy); */
     color: var(--White);
     text-decoration: none;
     border: 1px solid var(--Aqua-Blue);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
 }
 
 .more-menu-trigger {
@@ -728,17 +875,20 @@ body.menu-open {
 }
 
 .hero-content h1 {
-    font-family: "FreightBig Pro";
+    /* font-family: "FreightBig Pro"; */
+    font-family: 'Hanley Pro';
     font-size: 48px;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 12px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
 }
 
 .hero-subtitle {
-    font-family: "Avenir LT Pro";
+    font-family: 'Venti CF';
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 900;
+    text-transform: uppercase;
     margin-bottom: 50px;
     color: var(--White);
 }
@@ -762,9 +912,9 @@ body.menu-open {
 
 .search-title {
     color: var(--White);
-    font-family: "FreightBig Pro";
+    font-family: "Venti CF";
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 900;
     text-align: center;
     margin-bottom: 20px;
     letter-spacing: 0.5px;
@@ -1145,9 +1295,9 @@ body.menu-open {
 }
 
 .certification-title {
-    font-family: "Avenir LT Pro";
-    font-size: 28px;
-    font-weight: 300;
+    font-family: "Venti CF";
+    font-size: 32px;
+    font-weight: 900;
     color: var(--Soft-Black);
     margin: 0 0 20px 0;
     letter-spacing: 3.2px;
@@ -1232,16 +1382,16 @@ body.menu-open {
 }
 
 .service-card-title {
-    font-family: "FreightBig Pro";
+    font-family: "Venti CF";
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 900;
     color: var(--White);
     margin: 0 0 15px 0;
 }
 
 .service-card-text {
     font-family: "Avenir LT Pro";
-    font-size: 15px;
+    font-size: 16px;
     color: var(--White);
     line-height: 1.6;
     margin: 0 0 20px 0;
@@ -1309,9 +1459,9 @@ body.menu-open {
 
 /* Info Content Styles */
 .info-title {
-    font-family: "Avenir LT Pro", sans-serif;
+    font-family: "Venti CF";
     font-size: 32px;
-    font-weight: 300;
+    font-weight: 900;
     color: var(--White);
     margin-bottom: 20px;
     letter-spacing: 3.2px;
@@ -1319,15 +1469,15 @@ body.menu-open {
 }
 
 .info-subtitle {
-    font-family: "FreightBig Pro", serif;
+    font-family: "FreightBig Pro";
     font-size: 24px;
-    font-style: italic;
+    font-weight: 700;
     color: var(--White);
     margin-bottom: 20px;
 }
 
 .info-text {
-    font-family: "Avenir LT Pro", sans-serif;
+    font-family: "Avenir LT Pro";
     font-size: 16px;
     line-height: 1.6;
     color: var(--White);
@@ -1342,10 +1492,10 @@ body.menu-open {
 .sugestedcards .sugestedcards-item .section-title{
         color: var(--White);
         text-align: center;
-        font-family: "Avenir LT Pro";
+        font-family: "Venti CF";
         font-size: 24px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 900;
         line-height: 32px;
         padding: 10px 0;
 }
@@ -1363,10 +1513,10 @@ body.menu-open {
 .testimonial-heading {
 color: var(--White);
 text-align: center;
-font-family: "FreightBig Pro";
+font-family: "Venti CF";
 font-size: 32px;
 font-style: normal;
-font-weight: 600;
+font-weight: 900;
 line-height: 40px;
 letter-spacing: 0.64px;
     margin-bottom: 50px;
@@ -1541,10 +1691,10 @@ letter-spacing: 0.64px;
 .newsletter-title {
     color: var(--White);
     text-align: center;
-    font-family: "FreightBig Pro";
+    font-family: "Venti CF";
     font-size: 32px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 900;
     line-height: 40px;
     letter-spacing: 0.64px;
     margin-bottom: 15px;
@@ -2215,6 +2365,7 @@ section.welcome-section {
     transform: translate(-50%, -50%);
     text-align: center;
     color: var(--White);
+    width: 100%;
 }
 .service-section{
     padding: 60px 0;
@@ -2315,14 +2466,14 @@ section.welcome-section {
 }
 .additional-services-section h4{
     color: var(--White);
-    font-weight: 400;
+    font-weight: 900;
 }
 .service-content-title {
     color: var(--Navy);
-    font-family: "Avenir LT Pro";
+    font-family: "venti cf";
     font-size: 32px;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 900;
     letter-spacing: 1px;
     margin-bottom: 20px;
 }
@@ -2385,6 +2536,7 @@ section.welcome-section {
 }
 .hero-banner-img .hero-content{
     width: 100%;
+    max-width: 100%;
 }
 .hero-subtitle{
     margin-bottom: 20px;
@@ -2452,9 +2604,9 @@ section.welcome-section {
 
 .parts-card-label h3 {
     color: var(--White);
-    font-family: "Avenir LT Pro";
+    font-family: "venti cf";
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 900;
     margin: 0;
     text-align: center;
     letter-spacing: 0.5px;
@@ -2462,16 +2614,16 @@ section.welcome-section {
 
 .financingsec h1{
     color: var(--White);
-    font-family: "FreightBig Pro";
+    font-family: "Hanley Pro";
     font-size: 48px;
-    font-weight: 700;
+    font-weight: 900;
     line-height: 56px;
 }
 .financingsec h2{
     color: var(--White);
-    font-family: "Avenir LT Pro";
+    font-family: "Venti CF";
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 900;
     line-height: 32px;
 }
 .financingsec p{
@@ -2552,9 +2704,9 @@ section.welcome-section {
 
 .contact-info-wrapper h2 {
     color: var(--Navy);
-    font-family: "FreightBig Pro";
+    font-family: "venti cf";
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 900;
     margin-bottom: 40px;
 }
 
@@ -2573,7 +2725,7 @@ section.welcome-section {
 }
 
 .contact-info-item h6 {
-    color: var(--Navy);
+    color: var(--Soft-Black);
     font-family: "Avenir LT Pro";
     font-size: 16px;
     font-weight: 700;
@@ -2597,9 +2749,9 @@ section.welcome-section {
 
 .contact-form-wrapper h2 {
     color: var(--White);
-    font-family: "FreightBig Pro";
+    font-family: "venti cf";
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 900;
     margin-bottom: 40px;
     text-align: center;
 }
@@ -2772,10 +2924,9 @@ section.welcome-section {
 }
 .aboutsec h2{
     color: var(--Navy);
-    font-family: "Avenir LT Pro";
+    font-family: "venti cf";
     font-size: 32px;
-    font-style: normal;
-    font-weight: 300;
+    font-weight: 900;
     line-height: 40px; 
     letter-spacing: 3.2px;
     text-transform: uppercase;
