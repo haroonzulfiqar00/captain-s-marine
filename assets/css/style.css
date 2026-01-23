@@ -3038,8 +3038,11 @@ section.welcome-section {
     .timeline-content p {
         font-size: 13px;
     }
+    .certifiedherosec{
+    padding-top: 30px;
 }
-.historysec h2,h3, p{
+}
+.historysec h2,.historysec h3,.historysec p{
     color: var(--White);
 }
 .historysec h2{
@@ -3058,7 +3061,18 @@ section.welcome-section {
     font-weight: 900;
     line-height: 40px; 
 }
-
+.certifiedherosec{
+    padding-top: 60px;
+}
+.certifiedherosec p{
+    font-size: 18px;
+}
+.ssosec .sugestedcards-item ul {
+    margin: 0 22px;
+}
+.ssosec .sugestedcards-item ul li{
+    margin-bottom: 10px;
+}
 @media (max-width: 576px) {
     .timeline-card {
         max-width: 100%;
