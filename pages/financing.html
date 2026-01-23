@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Flexible financing options for your boat purchase - Captain Marine">
-    <title>Financing - Captain Marine</title>    
+    <title>Financing - Captain Marine</title>
     <!-- Bootstrap 4.6.2 CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    
+
     <!-- Owl Carousel 2.3.4 CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
@@ -18,16 +18,17 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
     <!-- Font Awesome 4.7.0 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="../assets/css/style.css"></head>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
 
 <body>
     <!-- Main Header -->
-    <header id="main-header">
+    <header id="main-header" class="sticky-header">
         <div class="container-captain-fluid">
             <!-- Logo -->
             <div class="header-logo">
@@ -267,144 +268,149 @@
 
     <!-- Main Content -->
     <main>
-       
+
         <section class="bottom-bg-main m-0 py-lg-5 py-4">
             <div class="container">
 
-            <section class="service-section financingsec border-bottom">
-                <div class="container">
-                    <div class="flex-column-reverse flex-lg-row row">
-                        <div class="col-lg-6">
-                            <div class="text-lg-left text-center my-lg-0 my-4">
-                                <h1>Captain's Marine Financing</h1>
-                                <h2>Applying takes less than 5 minutes!</h2>
-                                <p class="pr-lg-5 pr-0">Captain’s Marine partners with Priority One Financial Services to make financing fast, easy, and stress-free. Our goal is to get you on the water quickly, and Priority One handles the details - reviewing your secure application, working with top lenders, and offering extended service and insurance options. With years of trusted collaboration, we ensure your financing experience is seamless so you can focus on your next lake adventure.</p>
-                                <a href="#" class="global-cap-btn mt-lg-4">Apply Today</a>
+                <section class="service-section financingsec border-bottom">
+                    <div class="container">
+                        <div class="flex-column-reverse flex-lg-row row">
+                            <div class="col-lg-6">
+                                <div class="text-lg-left text-center my-lg-0 my-4">
+                                    <h1>Captain's Marine Financing</h1>
+                                    <h2>Applying takes less than 5 minutes!</h2>
+                                    <p class="pr-lg-5 pr-0">Captain’s Marine partners with Priority One Financial
+                                        Services to make financing fast, easy, and stress-free. Our goal is to get you
+                                        on the water quickly, and Priority One handles the details - reviewing your
+                                        secure application, working with top lenders, and offering extended service and
+                                        insurance options. With years of trusted collaboration, we ensure your financing
+                                        experience is seamless so you can focus on your next lake adventure.</p>
+                                    <a href="#" class="global-cap-btn mt-lg-4">Apply Today</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="/assets/images/financing/hero-img.png" alt="Service Image">
                             </div>
                         </div>
+                    </div>
+                </section>
+
+
+
+                <div class="service-form globalform py-lg-5 py-4">
+                    <h2 class="text-center text-light pb-4">Financing Application</h2>
+                    <div class="row justify-content-center">
                         <div class="col-lg-6">
-                            <img src="/assets/images/financing/hero-img.png" alt="Service Image">
+                            <div class="service-form-content">
+                                <div class="form-group">
+                                    <label for="fname"></label>
+                                    <input type="text" class="form-control require_check" placeholder="First Name*"
+                                        id="fname" name="first_name">
+                                    <div class="field-error" id="error_fname"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lname"></label>
+                                    <input type="text" class="form-control require_check" placeholder="Last Name*"
+                                        id="lname" name="last_name">
+                                    <div class="field-error" id="error_lname"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email"></label>
+                                    <input type="email" class="form-control require_check" placeholder="Email*"
+                                        id="email" name="email">
+                                    <div class="field-error" id="error_email"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone"></label>
+                                    <input type="text" class="form-control require_check" placeholder="Phone*"
+                                        id="phone" name="phone">
+                                    <div class="field-error" id="error_phone"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="address"></label>
+                                    <input type="text" class="form-control require_check" placeholder="Address*"
+                                        id="address" name="address">
+                                    <div class="field-error" id="error_address"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="city"></label>
+                                    <input type="text" class="form-control require_check" placeholder="City*" id="city"
+                                        name="city">
+                                    <div class="field-error" id="error_city"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="state"></label>
+                                            <input type="text" class="form-control require_check" placeholder="State*"
+                                                id="state" name="state">
+                                            <div class="field-error" id="error_state"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="zip_code"></label>
+                                            <input type="text" class="form-control require_check"
+                                                placeholder="Zip Code*" id="zip_code" name="zip_code">
+                                            <div class="field-error" id="error_zip_code"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 class="text-light">Boat Info</h4>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="year"></label>
+                                            <input type="text" class="form-control require_check" placeholder="Year*"
+                                                id="year" name="year">
+                                            <div class="field-error" id="error_year"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="make"></label>
+                                            <input type="text" class="form-control require_check" placeholder="Make*"
+                                                id="make" name="make">
+                                            <div class="field-error" id="error_make"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="model"></label>
+                                            <input type="text" class="form-control require_check" placeholder="Model*"
+                                                id="model" name="model">
+                                            <div class="field-error" id="error_model"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="full_id"></label>
+                                            <input type="text" class="form-control require_check" placeholder="Full ID*"
+                                                id="full_id" name="full_id">
+                                            <div class="field-error" id="error_full_id"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="describe_service_needs"></label>
+                                            <textarea class="w-100" name="describe_service_needs"
+                                                id="describe_service_needs"
+                                                placeholder="Describe Service Needs"></textarea>
+                                        </div>
+                                        <div class="field-error" id="error_describe_service_needs"></div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn global-cap-btn">Send Request</button>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
 
-
-            
-            <div class="service-form globalform py-lg-5 py-4">
-                <h2 class="text-center text-light pb-4">Financing Application</h2>
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="service-form-content">
-                            <div class="form-group">
-                                <label for="fname"></label>
-                                <input type="text" class="form-control require_check" placeholder="First Name*"
-                                    id="fname" name="first_name">
-                                <div class="field-error" id="error_fname"></div>
-                            </div>
-                            <div class="form-group">
-                                <label for="lname"></label>
-                                <input type="text" class="form-control require_check" placeholder="Last Name*"
-                                    id="lname" name="last_name">
-                                <div class="field-error" id="error_lname"></div>
-                            </div>
-                            <div class="form-group">
-                                <label for="email"></label>
-                                <input type="email" class="form-control require_check" placeholder="Email*"
-                                    id="email" name="email">
-                                <div class="field-error" id="error_email"></div>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone"></label>
-                                <input type="text" class="form-control require_check" placeholder="Phone*"
-                                    id="phone" name="phone">
-                                <div class="field-error" id="error_phone"></div>
-                            </div>
-                            <div class="form-group">
-                                <label for="address"></label>
-                                <input type="text" class="form-control require_check" placeholder="Address*"
-                                    id="address" name="address">
-                                <div class="field-error" id="error_address"></div>
-                            </div>
-                            <div class="form-group">
-                                <label for="city"></label>
-                                <input type="text" class="form-control require_check" placeholder="City*" id="city"
-                                    name="city">
-                                <div class="field-error" id="error_city"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label for="state"></label>
-                                        <input type="text" class="form-control require_check" placeholder="State*"
-                                            id="state" name="state">
-                                        <div class="field-error" id="error_state"></div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label for="zip_code"></label>
-                                        <input type="text" class="form-control require_check"
-                                            placeholder="Zip Code*" id="zip_code" name="zip_code">
-                                        <div class="field-error" id="error_zip_code"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4 class="text-light">Boat Info</h4>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label for="year"></label>
-                                        <input type="text" class="form-control require_check" placeholder="Year*"
-                                            id="year" name="year">
-                                        <div class="field-error" id="error_year"></div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label for="make"></label>
-                                        <input type="text" class="form-control require_check" placeholder="Make*"
-                                            id="make" name="make">
-                                        <div class="field-error" id="error_make"></div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label for="model"></label>
-                                        <input type="text" class="form-control require_check" placeholder="Model*"
-                                            id="model" name="model">
-                                        <div class="field-error" id="error_model"></div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label for="full_id"></label>
-                                        <input type="text" class="form-control require_check" placeholder="Full ID*"
-                                            id="full_id" name="full_id">
-                                        <div class="field-error" id="error_full_id"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <label for="describe_service_needs"></label>
-                                        <textarea class="w-100" name="describe_service_needs"
-                                            id="describe_service_needs"
-                                            placeholder="Describe Service Needs"></textarea>
-                                    </div>
-                                    <div class="field-error" id="error_describe_service_needs"></div>
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <button type="submit" class="btn global-cap-btn">Send Request</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
             </div>
         </section>
     </main>
@@ -415,16 +421,17 @@
     </footer>
     <!-- jQuery (required for Bootstrap and Owl Carousel) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-    
+
     <!-- Bootstrap 4.6.2 JS Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
     <!-- Owl Carousel 2.3.4 JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+
     <!-- Custom Scripts -->
 
     <script src="../assets/js/main.js"></script>
