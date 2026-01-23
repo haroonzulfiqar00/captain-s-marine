@@ -538,7 +538,7 @@ a:hover {
 }
 
 .more-menu-trigger:hover {
-    color: #00a8e8;
+    color: #d4f3ff;
 }
 
 .hamburger-icon {
@@ -2930,4 +2930,146 @@ section.welcome-section {
     line-height: 40px; 
     letter-spacing: 3.2px;
     text-transform: uppercase;
+}
+
+/* ========================================
+   HISTORY TIMELINE SECTION
+   ======================================== */
+
+.history-timeline-section {
+    padding: 80px 0;
+}
+
+.timeline-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.timeline-row:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-card {
+    flex: 1;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    padding: 30px 0px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+    border-color: var(--White);
+}
+
+.timeline-card:hover .timeline-year {
+    color: var(--White);
+}
+
+.timeline-card:hover .timeline-content p {
+    color: var(--White);
+}
+
+.timeline-year {
+    font-family: 'Hanley Pro';
+    font-size: 36px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.timeline-content p {
+    font-family: 'Avenir LT Pro';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .timeline-card {
+        padding: 25px 15px;
+    }
+    
+    .timeline-year {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 992px) {
+    .timeline-row {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .timeline-card {
+        max-width: calc(33.333% - 10px);
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .history-timeline-section {
+        padding: 30px 0;
+    }
+    
+    .timeline-row {
+        gap: 12px;
+    }
+    
+    .timeline-card {
+        max-width: calc(50% - 6px);
+        padding: 20px 12px;
+    }
+    
+    .timeline-year {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .timeline-content p {
+        font-size: 13px;
+    }
+}
+.historysec h2,h3, p{
+    color: var(--White);
+}
+.historysec h2{
+    color: var(--White);
+    font-family: "FreightBig Pro";
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100px; 
+}
+.historysec h3{
+    color: var(--White);
+    font-family: "venti cf";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 40px; 
+}
+
+@media (max-width: 576px) {
+    .timeline-card {
+        max-width: 100%;
+        padding: 25px 20px;
+    }
+    
+    .timeline-year {
+        font-size: 28px;
+    }
+    
+    .timeline-content p {
+        font-size: 14px;
+    }
 }
