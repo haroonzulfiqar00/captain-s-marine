@@ -286,7 +286,10 @@ function initTestimonialCarousel() {
             autoplay: true,
             autoplayTimeout: 6000,
             autoplayHoverPause: true,
-            navText: ['‹', '›'], 
+            navText: [
+                '<img src="./assets/images/home/prev-btn.svg" alt="Previous">',
+                '<img src="./assets/images/home/next-btn.svg" alt="Next">'
+            ],
             responsive: {
                 0: {
                     items: 1,
@@ -466,6 +469,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 const targetContent = document.getElementById(targetTab);
                 if (targetContent) {
                     targetContent.classList.add('active');
+
+                    // Scroll to content on mobile only
+                    if (window.innerWidth < 992) {
+                        const headerOffset = 150; // Adjust for sticky header
+                        const elementPosition = targetContent.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.scrollY - headerOffset;
+                    
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }
                 }
             });
         });

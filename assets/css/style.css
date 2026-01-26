@@ -884,7 +884,7 @@ body.menu-open {
     text-align: center;
     color: var(--White);
     max-width: 80%;
-    padding: 0 20px;
+    padding: 20px;
 }
 
 .hero-content h1 {
@@ -1617,9 +1617,26 @@ letter-spacing: 0.64px;
     justify-content: center;
     cursor: pointer;
 }
-.testimonial-carousel .owl-nav button.owl-prev:hover {
+/* .testimonial-carousel .owl-nav button.owl-prev:hover {
     background: rgba(255, 255, 255, 0.3) !important;
+} */
+.testimonial-carousel .owl-nav button.owl-prev img {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    border-radius: 50px;
 }
+.testimonial-carousel .owl-nav button.owl-prev img:hover {
+    background-color: var(--Aqua-Blue) !important;
+    border-radius: 50px;
+}
+.testimonial-carousel .owl-nav button.owl-next img {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    border-radius: 50px;
+}
+.testimonial-carousel .owl-nav button.owl-next img:hover {
+    background-color: var(--Aqua-Blue) !important;
+    border-radius: 50px;
+}
+
 
 .testimonial-carousel .owl-nav button.owl-next {
     position: absolute;
@@ -1907,8 +1924,8 @@ letter-spacing: 0.64px;
 }
 
 .footer-sitemap:hover {
-    color: var(--White);
-    text-decoration: underline;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.4);
 }
 
 /* Responsive */
@@ -2224,6 +2241,10 @@ section.welcome-section {
     .brand-item img {
         height: 350px !important;
     }
+    .footer-logo {
+        max-width: 250px;
+    margin: 0 auto;
+    }
 }
 
 @media (max-width: 768px) {
@@ -2287,6 +2308,8 @@ section.welcome-section {
     .footer-accordion-item {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         padding: 15px;
+       flex: 0 0 100% !important;
+        max-width: 100%;
     }
     
     .footer-heading {
@@ -2297,6 +2320,7 @@ section.welcome-section {
         user-select: none;
         font-size: 18px;
         color: var(--White);
+        text-align: justify;
     }
     
     .footer-accordion-icon {
@@ -2419,6 +2443,7 @@ section.welcome-section {
     background-color: rgba(66, 129, 160, 0.08);
     color: var(--White);
     border: none;
+    border-radius: 4px;
     padding: 18px 15px;
     text-align: left;
     font-family: "Avenir LT Pro";
@@ -2496,6 +2521,17 @@ section.welcome-section {
 .globalform .form-control,.globalform textarea {
     padding: 1.5rem .75rem;
     border-radius: 4px;
+    color: var(--text-black);
+}
+.globalform select.form-control:invalid {
+    color: rgba(10, 10, 10, 0.6);
+    padding: 0.8rem .75rem;
+    height: auto;
+}
+.globalform .formselect{
+    color: rgb(0, 0, 0);
+    padding: 0.8rem .75rem;
+    height: auto;
 }
 .globalform .form-control::placeholder,.globalform textarea::placeholder {
     color: rgba(10, 10, 10, 0.6);
@@ -2781,6 +2817,29 @@ section.welcome-section {
 .contact-form textarea.form-control {
     resize: vertical;
     min-height: 150px;
+}
+
+/* Custom Select with SVG Icon */
+.formselect {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('../images/form-options.svg');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 13px;
+    color: var(--text-gray);
+    cursor: pointer;
+    padding-right: 2.5rem;
+}
+
+.formselect:focus {
+    background-image: url('../images/form-options.svg');
+}
+
+/* Fix for IE10/11 */
+.formselect::-ms-expand {
+    display: none;
 }
 
 /* Responsive Design for Contact Section */
